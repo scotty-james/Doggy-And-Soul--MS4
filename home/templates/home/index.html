@@ -1,6 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">Doggy & Soul - NEW STORE COMING SOON!</h1>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1 class="display-4">Doggy & Soul</h1>
+            </div>
+            <div class="col-12">
+                <p class="display-5">100% organic treats for your dogs</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <a href="/"class="btn btn-black text-uppercase py-4">Shop Now
+            </div>
+        </div>
+    </div>
 {% endblock %}
