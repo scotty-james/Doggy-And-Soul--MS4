@@ -1,0 +1,218 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 1,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 2,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      },
+      {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+          "name": "Product Name",
+          "description": "Description of product",
+          "price": 53.99,
+          "category": 3,
+          "rating": 4.6,
+          "image": "dog-bowl-treat.jpg"
+        }
+      }
+]
