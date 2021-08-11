@@ -17,7 +17,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 52.99,
           "category": 1,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
@@ -29,7 +29,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 51.99,
           "category": 1,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
@@ -41,7 +41,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 50.99,
           "category": 1,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
@@ -53,7 +53,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 49.99,
           "category": 1,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
@@ -65,7 +65,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 48.99,
           "category": 1,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
@@ -91,7 +91,7 @@
           "description": "Description of product",
           "price": 53.99,
           "category": 2,
-          "rating": 4.6,
+          "rating": 5,
           "image": "dog-bowl-treat.jpg"
         }
       },
@@ -101,9 +101,9 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 10.00,
           "category": 2,
-          "rating": 4.6,
+          "rating": 1,
           "image": "dog-bowl-treat.jpg"
         }
       },
@@ -115,7 +115,7 @@
           "description": "Description of product",
           "price": 53.99,
           "category": 2,
-          "rating": 4.6,
+          "rating": 4,
           "image": "dog-bowl-treat.jpg"
         }
       },
@@ -137,9 +137,9 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 25.99,
           "category": 2,
-          "rating": 4.6,
+          "rating": 3.5,
           "image": "dog-bowl-treat.jpg"
         }
       },
@@ -209,7 +209,7 @@
         "fields": {
           "name": "Product Name",
           "description": "Description of product",
-          "price": 53.99,
+          "price": 99.99,
           "category": 3,
           "rating": 4.6,
           "image": "dog-bowl-treat.jpg"
