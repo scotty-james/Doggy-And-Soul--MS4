@@ -8,7 +8,7 @@
           "price": 53.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -20,7 +20,7 @@
           "price": 52.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -32,7 +32,7 @@
           "price": 51.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -44,7 +44,7 @@
           "price": 50.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -56,7 +56,7 @@
           "price": 49.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -68,7 +68,7 @@
           "price": 48.99,
           "category": 1,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -80,7 +80,7 @@
           "price": 53.99,
           "category": 2,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -92,7 +92,7 @@
           "price": 53.99,
           "category": 2,
           "rating": 5,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -104,7 +104,7 @@
           "price": 10.00,
           "category": 2,
           "rating": 1,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -116,7 +116,7 @@
           "price": 53.99,
           "category": 2,
           "rating": 4,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -128,7 +128,7 @@
           "price": 53.99,
           "category": 2,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -140,7 +140,7 @@
           "price": 25.99,
           "category": 2,
           "rating": 3.5,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -152,7 +152,7 @@
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -164,7 +164,7 @@
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -176,7 +176,7 @@
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -188,7 +188,7 @@
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -200,7 +200,7 @@
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       },
       {
@@ -212,7 +212,7 @@
           "price": 99.99,
           "category": 3,
           "rating": 4.6,
-          "image": "dog-bowl-treat.jpg"
+          "image": "noimage.png"
         }
       }
 ]
