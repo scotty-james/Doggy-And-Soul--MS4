@@ -24,7 +24,7 @@
                             <p class="text-muted">Posted By: {{ post.user }} | Date Published: {{ post.created_on }}
                             <p class="card-text">{{post.blog_content|slice:":200" }}</p>
                             </p>
-                            <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase ">
+                            <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">
                                 View Post
                             </a>
                         </div>

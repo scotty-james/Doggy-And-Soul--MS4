@@ -1,7 +1,9 @@
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Post
+from .forms import PostForm
 
 
 def blog_posts(request):
@@ -26,3 +28,27 @@ def post_detail(request, post_id):
     }
 
     return render(request, 'blog/post_detail.html', context)
+
+
+@login_required
+def add_post(request):
+    """ A view to add blog posts """
+    if request.method == 'POST':
+        post_form = PostForm(request.POST)
+        if post_form.is_valid():
+            form_data = post_form.save(commit=False)
+            form_data.user = request.user
+            form_data.save()
+            messages.success(request, 'Your blog was posted successfully!')
+            return redirect('blog_posts')
+        else:
+            messages.error(request, 'Oops, something went wrong! Please try again')
+            return redirect('add_post')
+    else:
+        post_form = PostForm()
+
+    template = 'blog/add_post.html'
+    context = {
+        'post_form': post_form,
+    }
+    return render(request, template, context)
