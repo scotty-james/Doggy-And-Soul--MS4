@@ -32,12 +32,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dog Blog
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="blog-link">
-                <a href="" class="dropdown-item">July Blog</a>
-                <a href="" class="dropdown-item">August Blog</a>
+                <a href="{% url 'blog_posts' %}" class="dropdown-item">Latest Blog Posts</a>
             </div>
         </li>
     </ul>

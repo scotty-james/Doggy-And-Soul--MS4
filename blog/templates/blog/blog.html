@@ -1,10 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -15,13 +10,27 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Blog</h2>
-                <hr>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Dog Blog</h2>
+                            <!-- Blog Posts -->
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    {% for post in posts %}
+                        <div class="card p-5 my-5">
+                            <p class="text-uppercase">{{ post.title }}</p>
+                            <p class="text-muted">Posted By: {{ post.user }} | Date Published: {{ post.created_on }}
+                            </p>
+                            <p>{{ post.post }}</p>
+                            <a href="" class="btn btn-sm btn-black rounded-0 text-uppercase ">
+                                View Post
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
             </div>
         </div>
 {% endblock %}

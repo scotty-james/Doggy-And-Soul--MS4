@@ -5,7 +5,8 @@ from .models import Post
 
 
 def blog_posts(request):
-    # View to return all blog posts
+    """ A view to show all blog posts """
+
     posts = Post.objects.filter(status=1).order_by('-created_on')
     drafts = Post.objects.filter(status=0).order_by('-created_on')
 
