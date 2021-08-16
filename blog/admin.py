@@ -3,7 +3,6 @@ from .models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    readonly_fields = ('user', )
 
     list_display = (
         'title',
