@@ -1,13 +1,10 @@
+
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link" aria-haspopup="true" aria-expanded="false">
+                Home
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="about-link">
-                <a href="" class="dropdown-item">July Blog</a>
-                <a href="" class="dropdown-item">August Blog</a>
-            </div>
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -15,12 +12,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dog-services-link">
                 <a href="{% url 'products' %}?category=organic_dog_treats" class="dropdown-item">Dog Walking</a>
-                <a href="" class="dropdown-item ">Hiking Adventures</a>
+                <a href="{% url 'products' %}?category=organic_dog_treats" class="dropdown-item ">Hiking Adventures</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="dogshop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dog Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dog-shop-link">
@@ -30,14 +26,10 @@
                 <a href="{% url 'products' %}?category=organic_dog_treats,bed_blanket,luxury_dog_collars" class="dropdown-item">All Products</a>
             </div>
         </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog_posts' %}" id="blog-link" aria-haspopup="true" aria-expanded="false">
                 Dog Blog
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="blog-link">
-                <a href="{% url 'blog_posts' %}" class="dropdown-item">Latest Blog Posts</a>
-            </div>
         </li>
     </ul>
 </div>

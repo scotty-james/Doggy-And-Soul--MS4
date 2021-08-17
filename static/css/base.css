@@ -14,8 +14,23 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*-------------------------------------------Colors*/
+
 .bg-color{
     background-color: rgb(255, 255, 255);
+}
+
+.text-black {
+    color: #000 
+}
+
+.text-blue {
+    color: #0b2f47 
+}
+
+.btn-blue {
+    background: #0b2f47;
+    color: white;
 }
 
 /* from Bulma */
@@ -35,20 +50,16 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
+.shop-now-btn {
+    background: #0b2f47;
     color: white;
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
