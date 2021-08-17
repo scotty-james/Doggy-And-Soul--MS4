@@ -52,3 +52,30 @@ def add_post(request):
         'post_form': post_form,
     }
     return render(request, template, context)
+
+
+@login_required
+def edit_post(request, post_id):
+    """ A view to edit blog posts """
+    post = get_object_or_404(Post, pk=post_id)
+
+    if request.method == 'POST':
+        post_form = PostForm(request.POST, request.FILES, instance=post)
+        if post_form.is_valid():
+            post_form.save()
+            messages.success(
+                request, f'{post.title} Successfully Updated')
+            return redirect('blog_posts')
+        else:
+            messages.error(request, f'Something went wrong, {post.title} not updated please try again')
+    else:
+        post_form = PostForm(instance=post)
+        messages.info(request, f'You are currently editing {post.title}')
+
+        template = 'blog/edit_post.html'
+        context = {
+            'post_form': post_form,
+            'post': post,
+        }
+
+        return render(request, template, context)

@@ -22,6 +22,11 @@
                             <p class="text-uppercase">{{ post.title }}</p>
                             <p class="text-muted">Posted By: {{ post.user }} | Date Published: {{ post.created_on }}</p>
                             <p class="card-text">{{ post.blog_content }}</p>
+                            {% if post.user == request.user or request.user.is_superuser %}
+                            <div class="text-center">
+                        <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">Edit</a>
+                    </div>
+                {% endif %}
                         </div>
                 </div>
             </div>
