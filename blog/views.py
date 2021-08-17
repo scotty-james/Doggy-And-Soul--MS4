@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 
 
 def blog_posts(request):
@@ -22,9 +22,31 @@ def blog_posts(request):
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
+    comments = post.comments.filter(post=post_id).order_by('-created_on')
+
+    new_comment = None
+
+    # Comment added to Post
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = post
+            new_comment.user = request.user
+            new_comment.save()
+            messages.success(request, 'Comment successfully posted')
+            return redirect(reverse('post_detail', args=[post.id]))
+        else:
+            messages.error(request, 'Oops, something went wrong! Please try again')
+            return redirect(reverse('post_detail', args=[post.id]))
+    else:
+        comment_form = CommentForm()
 
     context = {
         'post': post,
+        'comment_form': comment_form,
+        'comments': comments,
+        'new_comment': new_comment,
     }
 
     return render(request, 'blog/post_detail.html', context)

@@ -13,14 +13,14 @@
 <div class="overlay"></div>
         <div class="container-fluid">
             <h1 class="text-center mb-4">Add Blog Post</h1>
-            !-- Add Blog Posts -->
+            <!-- Add Blog Posts -->
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-lg-6">
                         <div class="card p-5">
                             <form class="form" action="{% url 'add_post' %}" method="POST">
                                 {% csrf_token %}
                                 <fieldset>
-                                    {{ post_form|crispy }}
+                                {{ post_form|crispy }}
                                 </fieldset>
                                 <div class="text-center mt-2">
                                     <button class="btn btn-sm btn-black rounded-0 text-uppercase" type="submit">Add Post</button>
