@@ -60,12 +60,12 @@ def edit_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
 
     if request.method == 'POST':
-        post_form = PostForm(request.POST, request.FILES, instance=post)
+        post_form = PostForm(request.POST, instance=post)
         if post_form.is_valid():
             post_form.save()
             messages.success(
                 request, f'{post.title} Successfully Updated')
-            return redirect('blog_posts')
+            return redirect(reverse('post_detail', args=[post.id]))
         else:
             messages.error(request, f'Something went wrong, {post.title} not updated please try again')
     else:
@@ -79,3 +79,13 @@ def edit_post(request, post_id):
         }
 
         return render(request, template, context)
+
+
+@login_required
+def delete_post(request, post_id):
+    """ A view to delete blog posts """
+
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    messages.success(request, f'{post.title} Successfully Deleted')
+    return redirect(reverse('blog_posts'))

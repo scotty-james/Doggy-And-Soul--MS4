@@ -25,6 +25,7 @@
                             {% if post.user == request.user or request.user.is_superuser %}
                             <div class="text-center">
                         <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">Edit</a>
+                        <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">Delete</a>
                     </div>
                 {% endif %}
                         </div>
