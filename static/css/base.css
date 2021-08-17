@@ -16,8 +16,12 @@ body {
 
 /*-------------------------------------------Colors*/
 
-.bg-color{
+.bg-white{
     background-color: rgb(255, 255, 255);
+}
+
+.bg-blue{
+    background-color: #0b2f47;
 }
 
 .text-black {
@@ -31,6 +35,10 @@ body {
 .btn-blue {
     background: #0b2f47;
     color: white;
+}
+
+.table-sm td, .table-sm th {
+    padding: 0; 
 }
 
 /* from Bulma */
@@ -54,6 +62,11 @@ body {
     background: #0b2f47;
     color: white;
     min-width: 260px;
+}
+
+.container-pd{
+    padding-bottom: 6rem;
+    margin-bottom: auto;
 }
 
 
