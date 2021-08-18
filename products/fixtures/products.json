@@ -3,12 +3,12 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "",
+          "description": "Cotton Dog Collar with Bowtie, Durable Adjustable and Comfortable Collar for Small Dogs Puppies and Cats, Neck 25-40cm",
           "price": 53.99,
           "category": 1,
-          "rating": 4.6,
-          "image": "noimage.png"
+          "rating": 4.3,
+          "image": "dog-collar1.jpg"
         }
       },
       {
@@ -16,11 +16,11 @@
         "model": "products.product",
         "fields": {
           "name": "Product Name",
-          "description": "Description of product",
+          "description": "Vivid Floral Dog Collar - Girl Dog Collar for Small Medium Large Dogs - Blackbird, Large",
           "price": 52.99,
           "category": 1,
-          "rating": 4.6,
-          "image": "noimage.png"
+          "rating": 3.2,
+          "image": "dog-collar2.jpg"
         }
       },
       {
@@ -28,11 +28,11 @@
         "model": "products.product",
         "fields": {
           "name": "Product Name",
-          "description": "Description of product",
+          "description": "Adjustable Pink Nylon Dog Collar Medium with Floral Patterned Ribbon for Active Female Dogs Neck 31-49cm",
           "price": 51.99,
           "category": 1,
-          "rating": 4.6,
-          "image": "noimage.png"
+          "rating": 5.0,
+          "image": "dog-collar3.jpg"
         }
       },
       {
@@ -40,11 +40,11 @@
         "model": "products.product",
         "fields": {
           "name": "Product Name",
-          "description": "Description of product",
+          "description": "Padded Leather Dog Collar, Slimline Edition - Large, Brown and Pink",
           "price": 50.99,
           "category": 1,
-          "rating": 4.6,
-          "image": "noimage.png"
+          "rating": 4.0,
+          "image": "dog-collar7.jpg"
         }
       },
       {
@@ -52,11 +52,11 @@
         "model": "products.product",
         "fields": {
           "name": "Product Name",
-          "description": "Description of product",
+          "description": "Black Leather Dog Collar , Made with Genuine Real Leather, Best for Large Male or Female Dogs",
           "price": 49.99,
           "category": 1,
-          "rating": 4.6,
-          "image": "noimage.png"
+          "rating": 4.3,
+          "image": "dog-collar8.jpg"
         }
       },
       {
@@ -64,155 +64,155 @@
         "model": "products.product",
         "fields": {
           "name": "Product Name",
-          "description": "Description of product",
+          "description": "Leather Dog Collar Genuine Leather Alloy Hardware Double D-Ring Dual Stitching 3 Best for Medium Large and Extra Large Dogs ",
           "price": 48.99,
           "category": 1,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "dog-collar6.jpg"
         }
       },
       {
         "pk": 7,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Lilly's Kitchen Training Treats",
+          "description": "Lily's Kitchen Organic Cheese & Apple Dog Training Treats, 8 x 80g Packs",
           "price": 53.99,
           "category": 2,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "dog-treat1.jpg"
         }
       },
       {
         "pk": 8,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Pets Purest Natural Dog Treats",
+          "description": "Pets Purest Natural Dog Treats 100% Pure Beef Air-Dried Chews for Dogs - Just One Ingredient - Grain, Gluten & Lactose Free - Deliciously Healthy Raw Dog Treat for Dog Puppy (approx 24pcs / 100g pack)",
           "price": 53.99,
           "category": 2,
           "rating": 5,
-          "image": "noimage.png"
+          "image": "dog-treat2.jpg"
         }
       },
       {
         "pk": 9,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Pets Purest 100% Natural Dog Treats",
+          "description": "Pets Purest Natural Dog Treats 100% Pure Beef Bites Air-Dried Food for Dogs - Just One Ingredient - Grain, Gluten & Lactose Free - Deliciously Healthy Raw Dog Treat for Dog Puppy Senior Adult (300g)",
           "price": 10.00,
           "category": 2,
           "rating": 1,
-          "image": "noimage.png"
+          "image": "dog-treat9.jpg"
         }
       },
       {
         "pk": 10,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Pets Purest Natural Sprats Dog Treats",
+          "description": "Pets Purest Natural Sprats Dog Treats 100% Pure Air-Dried Treats for Dogs - Just One Ingredient - Grain, Gluten & Lactose Free - Deliciously Healthy Raw Dog Treat for Dog Puppy Senior Adult (100g)",
           "price": 53.99,
           "category": 2,
           "rating": 4,
-          "image": "noimage.png"
+          "image": "dog-treat11.jpg"
         }
       },
       {
         "pk": 11,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Grain Free Dog Training Treats",
+          "description": "Bounce and Bella Grain Free Dog Training Treats - 800 Tasty & Healthy Treat Pack - 80% Fresh Poultry Meat, 20% Potato & Sweet Potato - Hypoallergenic Treats for Dogs with Sensitive Stomachs",
           "price": 53.99,
           "category": 2,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "dog-treat10.jpg"
         }
       },
       {
         "pk": 12,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Denzel's Healthy Dog Treats",
+          "description": "Denzel's Healthy Dog Treats - Low Calorie, Low Fat, Grain Free, Hypoallergenic, Natural Dog Treats - Variety Bundle: Soft 'n' Squishy Low Calorie Training Treats x 6 Plastic-Free Pouches (6 x 100g)",
           "price": 25.99,
           "category": 2,
           "rating": 3.5,
-          "image": "noimage.png"
+          "image": "dog-treat8.jpg"
         }
       },
       {
         "pk": 13,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Large Dog Bed",
+          "description": "Large Dog Bed Washable - Orthopedic Dog Mattress and Pillow Mat for Dog Crate with Removable Plush Sherpa Cover, Grey, 91.5x68.6x7.6cm",
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "bed1.jpg"
         }
       },
       {
         "pk": 14,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Waterproof Dog Bed",
+          "description": "Waterproof Dog Bed Large - Washable Dog Pillow Mattress With Water Resistant Oxford Fabric for Dog Crate",
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "bed2.jpg"
         }
       },
       {
         "pk": 15,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Medium Dog Bed",
+          "description": "Dog Bed Medium,Warm Soft Comfortable Pet Bed Sofa for Medium Dogs Cats Small Pets (Grey)",
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "bed3.jpg"
         }
       },
       {
         "pk": 16,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Super Comfy Dog Blanket",
+          "description": "The Dog’s Blanket Sound Sleep Donut Dog Blanket, Large Ice Premium Quality Calming, Anti-Anxiety Snuggler Blanket",
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "blanket1.jpg"
         }
       },
       {
         "pk": 17,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Premium Dog Fleece",
+          "description": "Premium Fluffy Fleece Dog Blanket, Soft and Warm Pet Throw",
           "price": 53.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "blanket2.jpg"
         }
       },
       {
         "pk": 18,
         "model": "products.product",
         "fields": {
-          "name": "Product Name",
-          "description": "Description of product",
+          "name": "Snuggles Time Dog Blanket",
+          "description": "Dog Blanket Washable double Fleece fluffy Pet Blankets for Dogs",
           "price": 99.99,
           "category": 3,
           "rating": 4.6,
-          "image": "noimage.png"
+          "image": "blanket3.jpg"
         }
       }
 ]
