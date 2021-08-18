@@ -20,6 +20,19 @@
     <hr>
     <!-- Fully expanded Individual Blog Posts -->
     <div class="container">
+        <div class="col">
+            <div class="image-container my-5">
+                {% if post.image %}
+                    <a href="{{ post.image.url }}" target="_blank">
+                        <img class="" src="{{ post.image.url }}" alt="{{ post.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.name }}">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <div class="my-4">

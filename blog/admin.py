@@ -8,6 +8,7 @@ class PostAdmin(admin.ModelAdmin):
         'title',
         'user',
         'created_on',
+        'image',
         'status',
     )
 
