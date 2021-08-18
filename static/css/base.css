@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+
+/*-------------------------------------------General*/
 html {
     height: 100%;
 }
@@ -10,22 +12,73 @@ body {
     background: url('/media/dog-bowl-treat.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
+
+.container-pd{
+    padding-bottom: 6rem;
+    margin-bottom: auto;
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  .heading-font {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1rem;
+  }
 
 /*-------------------------------------------Colors*/
 
-.bg-white{
-    background-color: rgb(255, 255, 255);
+.bg-white {
+    background-color: #fafafa;
 }
 
 .bg-blue{
     background-color: #0b2f47;
 }
 
-.text-black {
-    color: #000 
+.text-white {
+    color: rgb(255, 255, 255) 
 }
 
 .text-blue {
@@ -37,9 +90,34 @@ body {
     color: white;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 .table-sm td, .table-sm th {
     padding: 0; 
 }
+
+/*-------------------------------------------Buttons*/
+
+.btn {
+    color: white;
+    background-color: #0b2f47;
+    border-radius: .25rem;
+  }
+
+  .btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  .btn-shop-now {
+    background: #0b2f47;
+    color: white;
+    min-width: 13rem;
+}
+
+/*-------------------------------------------CSS used from Ado Boutique Project*/
 
 /* from Bulma */
 .icon {
@@ -48,61 +126,21 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}
 
-.logo-font {
-    text-transform: uppercase;
 }
 
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-btn {
-    background: #0b2f47;
-    color: white;
-    min-width: 260px;
-}
-
-.container-pd{
-    padding-bottom: 6rem;
-    margin-bottom: auto;
-}
-
-
-.shop-now-btn:hover,
-.shop-now-btn:active,
-.shop-now-btn:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
     border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
 }
 
 .border-black {
     border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
 }
 
 .overlay {
@@ -111,7 +149,7 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #ffffff;
 	z-index: -1;
 }
 
@@ -149,7 +187,6 @@ a.category-badge > span.badge:hover {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -161,7 +198,6 @@ a.category-badge > span.badge:hover {
     right: 36px;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -238,9 +274,6 @@ a.category-badge > span.badge:hover {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -282,16 +315,6 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
-/*-------------------------------------------Footer*/
-
-.page-footer{
-    color:#ffffff;
-}
-.social-links{
-    margin: 0 1rem;
-    font-size: 1.5rem;
-}
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -312,7 +335,7 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 10rem;
     }
 }
 

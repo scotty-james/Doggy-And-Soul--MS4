@@ -2,23 +2,24 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <section class="container container-pd">
-        <div class="overlay"></div>
-        <div class="row">
-            <div class="col mt-3">
-                <h2>The Dog Blog</h2>
-            </div>
+<main class="container container-pd">
+    <div class="overlay"></div>
+    <div class="row">
+        <div class="col mt-3">
+            <h2>The Dog Blog</h2>
         </div>
-        <hr>
-          <!-- Fully expanded Individual Blog Posts -->
+    </div>
+    <hr>
+    <!-- Fully expanded Individual Blog Posts -->
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="my-4">
@@ -27,52 +28,57 @@
                     <p class="card-text">{{ post.blog_content }}</p>
                     {% if post.user == request.user or request.user.is_superuser %}
                     <div class="text-center">
-                <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Edit</a>
-                <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete</a>
+                        <a href="{% url 'edit_post' post.id %}"
+                            class="btn btn-sm btn-blue rounded-0 text-uppercase">Edit</a>
+                        <a href="{% url 'delete_post' post.id %}"
+                            class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete</a>
+                    </div>
+                </div>
             </div>
-        {% endif %}
-            </div>
+            {% endif %}
         </div>
+        <hr>
     </div>
-    <hr>
-     <!-- Post Comments to individual blogs -->
-     <div class="row">
-        <div class="col">
+    <!-- Post Comments to individual blogs -->
+    <div class="container">
+    <div class="row">
+        <div class="col mb-4">
             <h3>Comments: {{ comments|length }}</h3>
-            <hr>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-4">
             {% for comment in comments %}
-                <div class="card p-2 mb-2">
-                    <p class="text-muted">Posted By: {{ comment.user }}
+                <p class=""> Posted By: {{ comment.user }}
                     <p class="text-muted">Posted On: {{ comment.created_on }}</p>
                     <p class="">{{ comment.comment_content }}</p>
-                </div>
-            </div>
+                    <hr>
+                    {% endfor %}
         </div>
-            {% endfor %}
-                <!-- Comment Form -->
-                <div class="row pb-5">
-                    <div class="col">
-                    {% if request.user.is_authenticated %}
-                    <h3 class="">Add comment below</h3>
-                     <form class="form" method="POST">
-                    {% csrf_token %}
-                    <fieldset>
-                        {{ comment_form|crispy }}
-                    </fieldset>
-                        <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Add Comment</button>
-                </form>
-            </div>
-        {% else %}
-            <div class="">
-                <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a> 
-                </p>
-            </div>
-        {% endif %}
+</div>
+</div>
+    <!-- Comment Form -->
+    <div class="container">
+    <div class="row pb-5">
+        <div class="col">
+            {% if request.user.is_authenticated %}
+            <h3 class="">Add comment</h3>
+            <form class="form" method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    {{ comment_form|crispy }}
+                </fieldset>
+                <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Submit Comment</button>
+            </form>
         </div>
-</section>
+    </div>
+    {% else %}
+    <div class="">
+        <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
+        </p>
+    </div>
+    {% endif %}
+    </div>
+</main>
 
 {% endblock %}
