@@ -10,62 +10,69 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Dog Blog</h2>
-                            <!-- Fully expanded Individual Blog Posts -->
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-lg-6">
-                        <div class="card p-5 my-5">
-                            <p class="text-uppercase">{{ post.title }}</p>
-                            <p class="text-muted">Posted By: {{ post.user }} on the {{ post.created_on }}</p>
-                            <p class="card-text">{{ post.blog_content }}</p>
-                            {% if post.user == request.user or request.user.is_superuser %}
-                            <div class="text-center">
-                        <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">Edit</a>
-                        <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-black rounded-0 text-uppercase">Delete</a>
-                    </div>
-                {% endif %}
-                </div>
-                </div>
-            </div>
+    <section class="container container-pd">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col mt-3">
+                <h2>The Dog Blog</h2>
             </div>
         </div>
-        <!-- Post Comments to individual blogs -->
-    <div class="col text-center mt-3">
-    <h3 class="logo-font">Comments</h3>
-    <div class="row justify-content-center">
-        <div class="col-sm-12 col-lg-6">
-            {% if request.user.is_authenticated %}
-            {% for comment in comments %}
-                <div class="card p-3 my-3">
-                    <p class="text-muted">Posted By: {{ comment.user }} on the {{ comment.created_on }}</p>
-                    <p class="card-text">{{ comment.comment_content }}</p>
-                </div>
-            {% endfor %}
-                <!-- Comment Form -->
-                    <div class="card p-5">
-                        <h3 class="logo-font">Post a comment</h3>
-                    <form class="form" method="POST">
-                        {% csrf_token %}
-                        <fieldset>
-                            {{ comment_form|crispy }}
-                        </fieldset>
-                        <div class="text-center">
-                            <button class="btn btn-sm btn-black rounded-0 text-uppercase" type="submit">Add Comment</button>
-                        </div>
-                    </form>
-                </div>
-            {% else %}
-                <div class="card p-5 text-center">
-                    <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a> 
-                    </p>
-                </div>
-            {% endif %}
+        <hr>
+          <!-- Fully expanded Individual Blog Posts -->
+        <div class="row">
+            <div class="col">
+                <div class="my-4">
+                    <h2 class="text-uppercase">{{ post.title }}</h2>
+                    <p class="text-muted">Posted By: {{ post.user }} on the {{ post.created_on }}</p>
+                    <p class="card-text">{{ post.blog_content }}</p>
+                    {% if post.user == request.user or request.user.is_superuser %}
+                    <div class="text-center">
+                <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Edit</a>
+                <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete</a>
+            </div>
+        {% endif %}
+            </div>
         </div>
     </div>
-</div>
+    <hr>
+     <!-- Post Comments to individual blogs -->
+     <div class="row">
+        <div class="col">
+            <h3>Comments: {{ comments|length }}</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% for comment in comments %}
+                <div class="card p-2 mb-2">
+                    <p class="text-muted">Posted By: {{ comment.user }}
+                    <p class="text-muted">Posted On: {{ comment.created_on }}</p>
+                    <p class="">{{ comment.comment_content }}</p>
+                </div>
+            </div>
+        </div>
+            {% endfor %}
+                <!-- Comment Form -->
+                <div class="row pb-5">
+                    <div class="col">
+                    {% if request.user.is_authenticated %}
+                    <h3 class="">Add comment below</h3>
+                     <form class="form" method="POST">
+                    {% csrf_token %}
+                    <fieldset>
+                        {{ comment_form|crispy }}
+                    </fieldset>
+                        <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Add Comment</button>
+                </form>
+            </div>
+        {% else %}
+            <div class="">
+                <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a> 
+                </p>
+            </div>
+        {% endif %}
+        </div>
+</section>
 
 {% endblock %}
