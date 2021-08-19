@@ -7,10 +7,9 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'blog_content', 'image' )
-        exclude = ('user', 'created_on', )
+        fields = ('title', 'blog_content', 'image',)
 
-image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
 
 class CommentForm(forms.ModelForm):

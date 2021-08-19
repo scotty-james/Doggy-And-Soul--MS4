@@ -56,7 +56,7 @@ def post_detail(request, post_id):
 def add_post(request):
     """ A view to add blog posts """
     if request.method == 'POST':
-        post_form = PostForm(request.POST)
+        post_form = PostForm(request.POST, request.FILES)
         if post_form.is_valid():
             form_data = post_form.save(commit=False)
             form_data.user = request.user
