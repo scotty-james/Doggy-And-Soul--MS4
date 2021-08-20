@@ -317,12 +317,6 @@ a.category-badge > span.badge:hover {
 
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

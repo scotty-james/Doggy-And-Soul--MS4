@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Post
+from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
 
@@ -26,7 +26,8 @@ def post_detail(request, post_id):
 
     new_comment = None
 
-    # Comment added to Post
+    """ Adds comment to blog post """
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -122,4 +123,14 @@ def delete_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
     messages.success(request, f'{post.title} Successfully Deleted')
+    return redirect(reverse('blog_posts'))
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """ A view to delete blog comments """
+    
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment deleted!')
     return redirect(reverse('blog_posts'))

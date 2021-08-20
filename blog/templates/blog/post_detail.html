@@ -22,10 +22,10 @@
     <div class="container">
         <div class="col">
             <div class="image-container my-5">
-                {% if post.image %} 
-                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog_img blog-img" />             
+                {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog_img blog-img" />
                 {% else %}
-                    <img src="{{ post.image_url }}" alt="{{ post.title }}" class="blog_img blog-img" />
+                <img src="{{ post.image_url }}" alt="{{ post.title }}" class="blog_img blog-img" />
                 {% endif %}
             </div>
         </div>
@@ -50,43 +50,51 @@
     </div>
     <!-- Post Comments to individual blogs -->
     <div class="container">
-    <div class="row">
-        <div class="col mb-4">
-            <h3>Comments: {{ comments|length }}</h3>
+        <div class="row">
+            <div class="col mb-4">
+                <h3>Comments: {{ comments|length }}</h3>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-4">
-            {% for comment in comments %}
+        <div class="row">
+            <div class="col">
+                {% for comment in comments %}
                 <p class=""> Posted By: {{ comment.user }}
                     <p class="text-muted">Posted On: {{ comment.created_on }}</p>
                     <p class="">{{ comment.comment_content }}</p>
+                    <div class="">
+                    {% if comment.user == request.user or request.user.is_superuser %}
+                    <a href="{% url 'delete_comment' comment.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete Comment</a>
                     <hr>
+                    </div>
+                    {% endif %}
                     {% endfor %}
+            </div>
         </div>
-</div>
-</div>
-    <!-- Comment Form -->
-    <div class="container">
-    <div class="row pb-5">
-        <div class="col">
-            {% if request.user.is_authenticated %}
-            <h3 class="">Add comment</h3>
-            <form class="form" method="POST">
-                {% csrf_token %}
-                <fieldset>
-                    {{ comment_form|crispy }}
-                </fieldset>
-                <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Submit Comment</button>
-            </form>
+            
+            <!-- Comment Form -->
+            <div class="container">
+                <div class="row pb-5">
+                    <div class="col-6 mt-5">
+                        {% if request.user.is_authenticated %}
+                        <h3 class="">Add comment</h3>
+                        <form class="form" method="POST">
+                            {% csrf_token %}
+                            <fieldset>
+                            {{ comment_form|crispy }}
+                            <fieldset>
+                            <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Submit
+                                Comment</button>
+                        </form>
+                    </div>
+                </div>
+                {% else %}
+                <div class="">
+                    <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
+                    </p>
+                </div>
+                {% endif %}
+            </div>
         </div>
-    </div>
-    {% else %}
-    <div class="">
-        <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
-        </p>
-    </div>
-    {% endif %}
     </div>
 </main>
 
