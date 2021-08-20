@@ -12,7 +12,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     blog_content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=0)
     image = models.ImageField(null=True, blank=True)
 
     class Meta:

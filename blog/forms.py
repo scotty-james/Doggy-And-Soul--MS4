@@ -7,7 +7,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'blog_content', 'image',)
+        fields = ('title', 'blog_content', 'status', 'image',)
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 

@@ -5,6 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from blog.models import Post
 
 
 @login_required
@@ -21,12 +22,14 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+        orders = profile.orders.all()
+        posts = Post.objects.filter(status=0).order_by('-created_on')
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'posts': posts,
         'on_profile_page': True
     }
 

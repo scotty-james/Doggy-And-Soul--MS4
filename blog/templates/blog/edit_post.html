@@ -36,3 +36,8 @@
             </div>
         </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'blog/js/blog_elements.js' %}"></script>
+{% endblock %} 
