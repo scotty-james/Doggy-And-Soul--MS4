@@ -55,6 +55,11 @@ def post_detail(request, post_id):
 @login_required
 def add_post(request):
     """ A view to add blog posts """
+    
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         post_form = PostForm(request.POST, request.FILES)
         if post_form.is_valid():
@@ -79,6 +84,11 @@ def add_post(request):
 @login_required
 def edit_post(request, post_id):
     """ A view to edit blog posts """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     post = get_object_or_404(Post, pk=post_id)
     if request.method == 'POST':
         post_form = PostForm(request.POST, request.FILES, instance=post)
@@ -104,6 +114,10 @@ def edit_post(request, post_id):
 @login_required
 def delete_post(request, post_id):
     """ A view to delete blog posts """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
