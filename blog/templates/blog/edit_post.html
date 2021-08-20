@@ -17,14 +17,18 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-lg-6">
                         <div class="p-5">
-                            <form class="form" action="{% url 'edit_post' post.id %}" method="POST">
+                            <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                <fieldset>
-                                    {{ post_form|crispy }}
-                                </fieldset>
+                                {% for field in post_form %}
+                                   {% if field.name != 'image' %}
+                                       {{ field | as_crispy_field }}
+                                   {% else %}
+                                       {{ field }}
+                                   {% endif %}
+                               {% endfor %}
                                 <div class="text-center mt-2">
-                                    <a class="btn btn-sm btn-blue rounded-0 text-uppercase" href="{% url 'blog_posts' %}">Cancel</a>
                                     <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Edit Post</button>
+                                    <button class="btn btn-sm btn-blue rounded-0 text-uppercase" href="{% url 'blog_posts' %}">Cancel</a>
                                 </div>
                             </form>
                         </div>
