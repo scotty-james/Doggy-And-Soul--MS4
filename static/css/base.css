@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: url('/media/hero1.png') no-repeat center center fixed;
+    background: url('/media/1.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Montserrat', sans-serif;
@@ -119,10 +119,6 @@ p {
     background: #0b2f47;
     color: white;
     min-width: 13rem;
-}
-
-.container-fluid {
-    padding: 0;
 }
 
 /*-------------------------------------------CSS used from Ado Boutique Project*/
