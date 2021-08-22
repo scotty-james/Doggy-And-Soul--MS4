@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -20,31 +20,30 @@
     </div>
     <hr>
     <div class="col-12">
-        <p class="text-uppercase text-center mt-3">
-            <strong>Total blog posts: </strong>{{ posts|length }}
+        <p class="text-uppercase text-center mt-3 text-black">
+            <strong>Total blog posts: </strong>({{ posts|length }})
         </p>
     </div>
     <!-- All Blog Posts -->
     <div class="row">
         {% for post in posts %}
         <div class="col-sm-12 col-md-6">
-                <div class="card p-5">
-                    <div class="">
-                        {% if post.image %}
-                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="" />
-                        {% else %}
-                        <img src="{{ post.image_url }}" alt="{{ post.title }}" class="" />
-                        {% endif %}
-                    </div>
-                    <p class="text-uppercase">{{ post.title }}</p>
-                    <p class="text-muted">Posted By: {{ post.user }}</p> 
-                    <p class="text-muted">Posted On: {{ post.created_on }}</p> 
-                    <p class="card-text">{{post.blog_content|slice:":200" }}</p>
-                    <h3>Comments: {{ comments|length }}</h3>
-                    <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">
-                        Read More
-                    </a>
+            <div class="card p-5">
+                <div class="">
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="" />
+                    {% else %}
+                    <img src="{{ post.image_url }}" alt="{{ post.title }}" class="" />
+                    {% endif %}
                 </div>
+                <p class="text-uppercase text-black mt-3">{{ post.title }}</p>
+                <p class="text-muted mb-0">Posted By: {{ post.user }}</p>
+                <p class="text-muted">Posted On: {{ post.created_on }}</p>
+                <p class="card-text">{{post.blog_content|slice:":200" }}</p>
+                <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">
+                    Read More
+                </a>
+            </div>
         </div>
         {% endfor %}
     </div>
@@ -54,4 +53,3 @@
 </section>
 
 {% endblock %}
-

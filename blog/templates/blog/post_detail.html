@@ -52,50 +52,48 @@
     <div class="container">
         <div class="row">
             <div class="col mb-4">
-                <h3>Comments: {{ comments|length }}</h3>
+                <h3 class="text-uppercase mt-3">Comments: ({{ comments|length }})</h3>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 {% for comment in comments %}
-                <p class=""> Posted By: {{ comment.user }}
-                    <p class="text-muted">Posted On: {{ comment.created_on }}</p>
-                    <p class="">{{ comment.comment_content }}</p>
-                    <div class="">
+                <div class="shadow-sm p-1 mb-3 bg-white rounded">
+                    <p class="font-weight-bold mb-2 mt-3">{{ comment.user }} on {{ comment.created_on }}</p>
+                    <p class="text-black mb-2 mt-3">{{ comment.comment_content }}</p>
                     {% if comment.user == request.user or request.user.is_superuser %}
-                    <a href="{% url 'delete_comment' comment.id %}" class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete Comment</a>
-                    <hr>
-                    </div>
+                    <a href="{% url 'delete_comment' comment.id %}"
+                        class="btn btn-sm btn-blue rounded-0 text-uppercase"><i class="fas fa-trash-alt"></i> Delete</a>
                     {% endif %}
-                    {% endfor %}
+                </div>
+                {% endfor %}
             </div>
         </div>
-            
-            <!-- Comment Form -->
-            <div class="container">
-                <div class="row pb-5">
-                    <div class="col-6 mt-5">
-                        {% if request.user.is_authenticated %}
-                        <h3 class="">Add comment</h3>
-                        <form class="form" method="POST">
-                            {% csrf_token %}
-                            <fieldset>
+
+        <!-- Comment Form -->
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-6 mt-5 pl-0">
+                    {% if request.user.is_authenticated %}
+                    <h3 class="text-uppercase">Leave a comment</h3>
+                    <form class="form" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
                             {{ comment_form|crispy }}
                             <fieldset>
-                            <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit">Submit
-                                Comment</button>
-                        </form>
-                    </div>
+                                <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit"><i
+                                        class="fas fa-paper-plane"></i> Post
+                                    Comment</button>
+                    </form>
                 </div>
-                {% else %}
-                <div class="">
-                    <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
-                    </p>
-                </div>
-                {% endif %}
             </div>
+            {% else %}
+            <div class="">
+                <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
+                </p>
+            </div>
+            {% endif %}
         </div>
-    </div>
 </main>
 
 {% endblock %}
