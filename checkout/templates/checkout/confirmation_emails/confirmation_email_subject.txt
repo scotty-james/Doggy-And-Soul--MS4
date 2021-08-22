@@ -1,1 +1,1 @@
-Doggy & Soul Confirmation for Order Number {{ order.order_number }}
+The Dog Shop Order Confirmation: {{ order.order_number }}
