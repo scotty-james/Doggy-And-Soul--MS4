@@ -7,9 +7,9 @@ Thanks for your order! We’ll let you know when it’s on it’s way to you.
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
-Order Total: ${{ order.order_total }}
-Delivery: ${{ order.delivery_cost }}
-Grand Total: ${{ order.grand_total }}
+Order Total: €{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
 
 Delivery Address:
 {{ order.full_name }}
