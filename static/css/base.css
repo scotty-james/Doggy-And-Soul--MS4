@@ -65,6 +65,10 @@ p {
     text-transform: uppercase;
 }
 
+.header-font {
+    text-transform: uppercase;
+}
+
 p {
     font-size: 1rem;
 }
@@ -364,12 +368,16 @@ a.category-badge>span.badge:hover {
         padding-top: 0.25rem;
     }
 
-    .h2, h3 {
+    .h2 {
         text-align: center;
     }
 
     .nav-link {
         padding: 0;
+    }
+
+    .header-font {
+        text-align: center;
     }
 
     .nav-link i.fa-lg {
