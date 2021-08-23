@@ -17,3 +17,15 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('comment_content',)
+
+    def __init__(self, *args, **kwargs):
+        """ Add placeholder and remove auto-generated labels """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'comment_content': 'Add Comment',
+        }
+
+        for field in self.fields:
+            placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].label = False
