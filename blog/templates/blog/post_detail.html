@@ -88,9 +88,9 @@
                 </div>
             </div>
             {% else %}
-            <div class="">
-                <p> To comment on this post you need to first <a href="{% url 'account_login' %}" class="">login</a>
-                </p>
+            <div class="form-check-label" for="id-save-info">
+                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                <a class="text-info" href="{% url 'account_login' %}">login</a> to comment on this post.
             </div>
             {% endif %}
         </div>
