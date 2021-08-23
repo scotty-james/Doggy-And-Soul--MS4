@@ -358,15 +358,18 @@ a.category-badge>span.badge:hover {
 
     .heading-font {
         padding-top: .25rem;
+    }
+
+    .navbar {
+        padding-top: 0.25rem;
+    }
+
+    .h2, h3 {
         text-align: center;
     }
 
     .nav-link {
         padding: 0;
-    }
-
-    .h2, h3 {
-        text-align: center;
     }
 
     .nav-link i.fa-lg {
@@ -379,7 +382,7 @@ a.category-badge>span.badge:hover {
     }
 
     .list-inline-item {
-        margin-right: 3rem;
+        margin-right: .25rem;
     }
 
     #delivery-banner h4 {
