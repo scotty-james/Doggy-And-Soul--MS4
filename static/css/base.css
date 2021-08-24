@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: url('/media/canva.jpg') no-repeat center center fixed;
+    background: url('/media/canva3.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Montserrat', sans-serif;
@@ -122,7 +122,7 @@ p {
 .btn-shop-now {
     background: #0b2f47;
     color: white;
-    min-width: 13rem;
+    min-width: 16rem;
 }
 
 /*-------------------------------------------CSS used from Ado Boutique Project*/
