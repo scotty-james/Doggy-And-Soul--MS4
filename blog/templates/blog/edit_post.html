@@ -11,11 +11,18 @@
 
 {% block content %}
 <div class="bg-overlay"></div>
-<div class="container-fluid container-pd">
-    <h2 class="header-font mb-4 pt-2 text-center text-white">Edit Blog Post</h2>
+<div class="container container-pd">
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <h2 class="header-font mb-4 pt-2 text-center">Blog Management</h2>
+            <h5 class="text-muted text-center">Add a Blog Post</h5>
+            <hr>
+        </div>
+    </div>
     <!-- Edit Blog Posts -->
     <div class="row justify-content-center">
-        <div class="col-sm-12 col-lg-6">
+        <div class="col-sm-12 col-lg-8">
             <div class="p-5">
                 <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2"
                     enctype="multipart/form-data">

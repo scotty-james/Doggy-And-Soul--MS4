@@ -23,7 +23,7 @@
 
     <div class="row container-pd">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2 border-black"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
