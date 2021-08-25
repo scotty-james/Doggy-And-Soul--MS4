@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!-- header -->
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -9,20 +9,15 @@
 </div>
 {% endblock %}
 
+<!-- main page content -->
 {% block content %}
-<div class="container">
+<section class="container">
     <div class="row mt-5">
-        <div class="col-12 mt-5">
-            <h1 class="display-4 heading-font text-black">The Online Pet</h1>
-            <h1 class="display-4 heading-font text-black">Store</h1>
-            <div class="my-5">
-                <h4>
-                    <a href="{% url 'products' %}" class="btn-shop-now btn btn-lg text-uppercase py-3">Shop Now</a>
-                </h4>
-            </div>
+        <div class="col-12 col-md-6 mt-5">
+            <div class="jumbotron">
+                <h1 class="display-4 heading-font text-black">Online Pet Store!</h1>
+                <a class="btn-shop-now btn btn-lg text-uppercase py-3 stretched-link" href="{% url 'products' %}" role="button">Shop Now</a>
         </div>
     </div>
-</div>
-
-
+</section>
 {% endblock %}

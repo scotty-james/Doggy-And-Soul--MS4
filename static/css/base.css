@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: url('/media/canva3.jpg') no-repeat center center fixed;
+    background: url('/media/hero-main.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Montserrat', sans-serif;
@@ -124,6 +124,33 @@ p {
     color: white;
     min-width: 16rem;
 }
+
+.jumbotron {
+    padding: .5rem .5rem;
+    background-color: #e9ecef00;
+}
+
+/*-------------------------------------------Footer*/
+
+.page-footer {
+    background-color: #0065BF;
+    padding-top: 0;
+  }
+  
+  .social-links {
+      padding-top: 0;
+  }
+  
+  .fab {
+    color: white;
+    font-size: rem;
+}
+  
+  .footer-copyright {
+    padding-top: 0;
+    margin: 0;
+    background-color: black;
+  }
 
 /*-------------------------------------------CSS used from Ado Boutique Project*/
 
