@@ -195,6 +195,30 @@ position: fixed;
 z-index: -1;
 }
 
+.bg-overlay {
+    background: url('/media/bg-overlay.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    }
+
+.checkout-overlay {
+    background: url('/media/checkout-overlay.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    }
+
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
