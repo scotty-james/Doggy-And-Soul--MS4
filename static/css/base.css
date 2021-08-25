@@ -133,7 +133,6 @@ p {
 /*-------------------------------------------Footer*/
 
 .page-footer {
-    background-color: #0065BF;
     padding-top: 0;
   }
   
@@ -143,13 +142,12 @@ p {
   
   .fab {
     color: white;
-    font-size: rem;
+    font-size: 1.5rem;
 }
   
   .footer-copyright {
     padding-top: 0;
     margin: 0;
-    background-color: black;
   }
 
 /*-------------------------------------------CSS used from Ado Boutique Project*/
@@ -183,6 +181,19 @@ p {
     position: fixed;
     background: #ffffff;
     z-index: -1;
+}
+
+.blog-overlay {
+background: url('/media/blog-bg.jpg') no-repeat center center fixed;
+background-size: cover;
+height: calc(100vh - 164px);
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+position: fixed;
+background: #ffffff;
+z-index: -1;
 }
 
 a.category-badge>span.badge:hover {
@@ -324,7 +335,7 @@ a.category-badge>span.badge:hover {
 
 /* Product Form */
 
-.btn btn-file {
+.btn-file {
     position: relative;
     overflow: hidden;
     background-color: white;
