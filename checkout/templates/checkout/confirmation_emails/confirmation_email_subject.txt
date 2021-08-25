@@ -1,1 +1,1 @@
-The Dog Shop Order Confirmation: {{ order.order_number }}
+Your order for {{ order.dog_name }} is on it's way
