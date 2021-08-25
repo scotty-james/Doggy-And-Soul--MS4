@@ -15,12 +15,12 @@
     <div class="blog-overlay"></div>
     <div class="row">
         <div class="col mt-3">
-            <h2 class="header-font mb-4 pt-2 text-center">The Dog Blog <i class="fas fa-paw"></i></h2>
+            <h2 class="header-font mb-2 pt-1 text-center text-white">The Dog Blog <i class="fas fa-paw"></i></h2>
         </div>
     </div>
     <hr>
     <div class="col-12">
-        <p class="text-uppercase text-center mt-3 text-black">
+        <p class="text-uppercase text-center mt-3 text-white">
             <strong>Total blog posts: </strong>({{ posts|length }})
         </p>
     </div>
@@ -28,7 +28,7 @@
     <div class="row">
         {% for post in posts %}
         <div class="col-sm-12 col-md-6">
-            <div class="card p-5">
+            <div class="card p-4">
                 <div class="">
                     {% if post.image %}
                     <img src="{{ post.image.url }}" alt="{{ post.title }}" class="" />

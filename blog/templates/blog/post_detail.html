@@ -11,21 +11,21 @@
 
 {% block content %}
 <main class="container container-pd">
-    <div class="overlay"></div>
+    <div class="blog-overlay"></div>
     <div class="row">
         <div class="col mt-3">
-            <h2 class="header-font mb-4 pt-2">The Dog Blog</h2>
+            <h2 class="header-font mb-2 pt-1 text-center black-white">The Dog Blog <i class="fas fa-paw"></i></h2>
         </div>
     </div>
     <hr>
     <!-- Fully expanded Individual Blog Posts -->
     <div class="container">
         <div class="col">
-            <div class="my-5">
+            <div class="my-5 text-center">
                 {% if post.image %}
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog_img blog-img" />
+                <img src="{{ post.image.url }}" alt="{{ post.title }}"/>
                 {% else %}
-                <img src="{{ post.image_url }}" alt="{{ post.title }}" class="blog_img blog-img" />
+                <img src="{{ post.image_url }}" alt="{{ post.title }}"/>
                 {% endif %}
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <p class="text-black mb-2 mt-3">{{ comment.comment_content }}</p>
                     {% if comment.user == request.user or request.user.is_superuser %}
                     <a href="{% url 'delete_comment' comment.id %}"
-                        class="btn btn-sm btn-blue rounded-0 text-uppercase"><i class="fas fa-trash-alt"></i> Delete</a>
+                        class="btn btn-sm btn-blue rounded-0 mb-2 text-uppercase"><i class="fas fa-trash-alt"></i> Delete</a>
                     {% endif %}
                 </div>
                 {% endfor %}
