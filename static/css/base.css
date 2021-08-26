@@ -140,7 +140,6 @@ p {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -384,8 +383,9 @@ a.category-badge>span.badge:hover {
 .btn-file {
     position: relative;
     overflow: hidden;
+    color: rgb(0, 0, 0);
     background-color: rgb(161, 168, 172);
-    border: black;
+    border: rgb(0, 0, 0);
 }
 
 .btn-file input[type="file"] {
