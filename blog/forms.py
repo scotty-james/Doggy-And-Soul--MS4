@@ -28,5 +28,5 @@ class CommentForm(forms.ModelForm):
         for field in self.fields:
             placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-1'
             self.fields[field].label = False

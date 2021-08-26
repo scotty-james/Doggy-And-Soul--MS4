@@ -38,9 +38,9 @@
                     {% if post.user == request.user or request.user.is_superuser %}
                     <div class="text-center">
                         <a href="{% url 'edit_post' post.id %}"
-                            class="btn btn-sm btn-blue rounded-0 text-uppercase">Edit</a>
+                            class="btn btn-sm btn-blue rounded-1 text-uppercase">Edit</a>
                         <a href="{% url 'delete_post' post.id %}"
-                            class="btn btn-sm btn-blue rounded-0 text-uppercase">Delete</a>
+                            class="btn btn-sm btn-blue rounded-1 text-uppercase">Delete</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <p class="text-black mb-2 mt-3">{{ comment.comment_content }}</p>
                     {% if comment.user == request.user or request.user.is_superuser %}
                     <a href="{% url 'delete_comment' comment.id %}"
-                        class="btn btn-sm btn-blue rounded-0 mb-2 text-uppercase"><i class="fas fa-trash-alt"></i> Delete</a>
+                        class="btn btn-sm btn-blue rounded-1 mb-2 text-uppercase"><i class="fas fa-trash-alt"></i> Delete</a>
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -81,7 +81,7 @@
                         <fieldset>
                             {{ comment_form|crispy }}
                             <fieldset>
-                                <button class="btn btn-sm btn-blue rounded-0 text-uppercase" type="submit"><i
+                                <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit"><i
                                         class="fas fa-paper-plane"></i> Post
                                     Comment</button>
                     </form>

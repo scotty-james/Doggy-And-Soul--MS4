@@ -80,8 +80,8 @@ p {
     background-color: #0b2f47;
 }
 
-.bg-lblue {
-    background-color: #38b6ff
+.bg-green {
+    background-color: #5cb85c
 }
 
 .text-white {
@@ -92,11 +92,6 @@ p {
     color: #0b2f47
 }
 
-.btn-blue {
-    background: #0b2f47;
-    color: white;
-}
-
 .text-black {
     color: #000 !important;
 }
@@ -104,6 +99,16 @@ p {
 .table-sm td,
 .table-sm th {
     padding: 0;
+}
+
+.btn-blue {
+    background: #0b2f47;
+    color: white;
+}
+
+.btn-black {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 /*-------------------------------------------Buttons*/
