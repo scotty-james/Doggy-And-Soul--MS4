@@ -11,17 +11,16 @@
 
 {% block content %}
 <div class="bg-overlay"></div>
-<div class="container container-pd">
+<div class="container">
     <div class="row">
         <div class="col-12">
-            <br>
             <h2 class="header-font mb-4 pt-2 text-center">Product Management</h2>
             <h5 class="text-muted text-center">Add a Product</h5>
             <hr>
         </div>
     </div>
 
-    <div class="row justify-content-center container-pd">
+    <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-8">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}

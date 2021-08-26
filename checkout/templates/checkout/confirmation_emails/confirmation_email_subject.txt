@@ -1,1 +1,1 @@
-Your order for {{ order.dog_name }} is on it's way
+Thank you for your Dog Shop order {{ order.order_number }}
