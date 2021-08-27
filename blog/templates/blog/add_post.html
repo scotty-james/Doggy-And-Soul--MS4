@@ -22,24 +22,25 @@
     <!-- Add Blog Posts -->
     <div class="row justify-content-center container-pd">
         <div class="col-sm-12 col-lg-8">
-                <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in post_form %}
-                    {% if field.name != 'image' %}
-                    {{ field | as_crispy_field }}
-                    {% else %}
-                    {{ field }}
-                    {% endif %}
-                    {% endfor %}
-                    <div class="text-center mt-2">
-                        <p class="mt-0">*Select 'Draft' to save blog for later or select 'Publish' to post directly to the site.</p>
-                        <P>Draft posts will be saved in your<a class="text-info" href="{% url 'profile' %}"> Profile</a></P>
-                        <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit">Add Post</button>
-                        <button class="btn btn-sm btn-blue rounded-1 text-uppercase"
-                            href="{% url 'blog_posts' %}">Cancel</a>
-                    </div>
-                </form>
-            </div>
+            <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in post_form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-center mt-2">
+                    <p class="mt-0">*Select 'Draft' to save blog for later or select 'Publish' to post directly to the
+                        site.</p>
+                    <P>Draft posts will be saved in your<a class="text-info" href="{% url 'profile' %}"> Profile</a></P>
+                    <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit">Add Post</button>
+                    <button class="btn btn-sm btn-blue rounded-1 text-uppercase"
+                        href="{% url 'blog_posts' %}">Cancel</a>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 {% endblock %}

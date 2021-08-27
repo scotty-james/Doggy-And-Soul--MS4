@@ -21,6 +21,7 @@ def blog_posts(request):
 
 
 def post_detail(request, post_id):
+    """ A view to show an individual blog post """
     post = get_object_or_404(Post, pk=post_id)
     comments = post.comments.filter(post=post_id).order_by('-created_on')
 

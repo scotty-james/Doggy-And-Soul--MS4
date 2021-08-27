@@ -60,10 +60,8 @@
                                     ({{ comments|length }}) user comments, are you sure??
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="{% url 'blog_posts' %}"
-                                        class="btn btn-sm btn-blue">Cancel</a>
-                                    <a href="{% url 'delete_post' post.id %}"
-                                        class="btn-sm btn-danger">Delete</a>
+                                    <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-blue">Cancel</a>
+                                    <a href="{% url 'delete_post' post.id %}" class="btn-sm btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +106,7 @@
                                     <H4>Deleting your comment will remove it forever, you are you sure?</H4>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="{% url 'blog_posts' %}" class="btn btn-sm btn-blue"> Cancel</a>
+                                    <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-blue"> Cancel</a>
                                     <a href="{% url 'delete_comment' comment.id %}" class="btn-sm btn-danger">
                                         Delete</a>
                                 </div>
