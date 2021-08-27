@@ -88,3 +88,62 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 | Site Owner   | Delete site user comments                               | So that I can remove comments that are not appropriate   |
 
 --- 
+
+### Strategy
+
+#### External user’s goal
+
+> - Easily navigate a consumer website to find the products that I’m interested in. 
+> - Creating an account should be seamless and not require too much personal information or questions. 
+> - Checking out should be simple and easy to understand, I should know exactly what is in my basket and how much I am going to pay. 
+> - Adding comments and interacting with blog posts should be simple, and I should have control over my content by being able to delete posts whenever I decide to do so. 
+
+
+#### Site owner's goal
+
+> - Create a site that provides specific information to a targeted audience. 
+> - Create a site that allows site users to easily navigate products, having the ability to search and sort different product types and view individual product details - price, ratings etc. 
+> - Create a site that allows users to create an account, enabling them to store their information for quicker checkout. 
+> - reate a site that is user friendly and visually indicates when the user has actioned a specific event - like a pop up when adding a product to their shopping bag.
+> - Share content to engage site users. Allows users to read and interact with relevant content (Blog Posts) by having the ability to post comments / share opinions on individual articles. 
+> -  Create a business revenue stream by targeting a specific market with relevant products.
+
+
+### Scope
+
+#### Scope In
+
+- A homepage that instantly and visually demonstrates what the site’s overall purpose is.
+- A one page home page that provides a link to the site product page.
+- A nav bar that provides easy navigation to different product ranges. 
+- A search bar within the navbar throughout the site to allow users to quickly find relevant products. 
+- Product page that visually shows price, ratings and an image. 
+- Product details page that shows individual product information with quantity selector. 
+- Sorting functionality to allow the site user to sort by price, rating, name or category. 
+- Shopping bag icon in the navbar throughout the site, with visual indication of the users total spend. 
+- My account section that allows customers to create an account, as well as logging in and out of existing accounts. 
+- Dedicate profile page where site users can save their delivery information and view their order history. 
+- Active email receipts for account creation verification, password reset, and purchase receipts. 
+- Dedicated Blog Page that allows the site owner to post, edit and delete content. 
+- Comments structure that allows site users to comment on individual blog posts when signed into their account.
+- Site owner ability to add, edit and remove products from the store.
+- Site owner admin privileges to remove site user comments.
+- Site owner only ability to add, edit and delete blog posts.
+- Site owner ability to save draft blog posts in their user profile.
+- Stripe payments integration.
+
+#### Scope out
+
+- Ability to create an account or sign in using social media accounts.
+- Ability to add ratings to products.
+- Ability for site users to add blog posts.
+- Mandatory account creation - account creation only required to save personal information, shopping bag items between sessions or post comments to published blog posts. 
+- Site user ability to reply directly to other site user comments. 
+- Ability to like, up, or downvote other site user comments. 
+- Ability to save payment information. 
+- Ability to use google, android or alternative payment payment methods. 
+- Requirement for site owners to approve site users comments before being published. 
+
+--- 
+
+
