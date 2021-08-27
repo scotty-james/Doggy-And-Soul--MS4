@@ -55,4 +55,36 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 
 ---
 
+## <p align="center"> UX
 
+### User Stories
+
+|   As A       |  I want to be able to...                                |   So that I can...                                       |
+| :----------  | :-------------------------------------------------------|----------------------------------------------------------|
+| Site User    | Navigate through the site easily                        | Purchase quickly and efficiently                         |
+| Site User    | View individual products details                        | Decide if the product is what I need                     |
+| Site User    | Search for products on the site                         | Find what I need quickly                                 |
+| Site User    | Understand why I need to create and account             | Make a decision on where to share my personal details    |
+| Site User    | Make a purchase without having to create an account     | Do not need to share my personal details                 |
+| Site User    | Create an account                                       | Save my personal information                             |
+| Site User    | Create an account                                       | Comment on and share opinions on recent blog posts       |
+| Site User    | Receive email confirmation when creating an account     | Have confirmation that it was successful                 |
+| Site User    | Reset my password                                       | Access my account if I forget my password                |
+| Site User    | Have a personal profile page                            | View my order history                                    |
+| Site User    | Select quantity of individual products                  | Purchase the right quantity I require                    |
+| Site User    | Be able to delete any personal comments posted          | Full control over my content                             |
+| Site User    | Be notified when I add a product to my shopping bag     | I can easily see what I am buying                        |
+| Site User    | See the total cost of my purchase before paying         | Know how my will be charged to be debit/credit card      |
+| Site User    | See a payment success or failure message                | Verify that my purchase has been successful              |
+| Site User    | Receive a confirmation email after making a purchase    | Have a receipt and record of my purchase                 |
+| Site Owner   | Add products to the store from the front end            | Quickly add new products to the site                     |
+| Site Owner   | Edit products on the front end                          | Update products details on the site                      |
+| Site Owner   | Delete products from the front end                      | Remove products from the site                            |
+| Site Owner   | Add blog posts to the site                              | Share relevant information and engage with the site user |
+| Site Owner   | Edit blog posts on the site                             | Update the content easily                                |
+| Site Owner   | Save draft blog posts in my profile                     | Access and finish at a later time before posting to the site |
+| Site Owner   | View all saved draft blog posts in my admin profile     | Easily see all unpublished blog posts                    |
+| Site Owner   | Delete blog posts from site                             | Remove content from the site                             |
+| Site Owner   | Delete site user comments                               | So that I can remove comments that are not appropriate   |
+
+--- 
