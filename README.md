@@ -263,4 +263,31 @@ The wireframes for this project can be found below.
 - [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_mobile.pdf)
 - [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_desktop.pdf)
 
+--- 
 
+## Surface
+
+### Design
+
+The website’s primary purpose in an ecommerce site and as such the the design of the store has been simplistic without any distraction. The main page has only one call to action which is a SHOP NOW button. 
+
+The product page is dedicated to products and relevant product information. Customers can navigate back and forth from their shopping bag however the main goal is to seamlessly navigate the customer through to the checkout page in as little clicks as possible. The footer is simple and provides links to the site's social media platforms. 
+
+A dedicated blog page provides relevant content and allows the user to interact by being able to post comments to individual blog posts. The blog section is accessed via a link in the nav bar, but otherwise is not promoted throughout the customer journey. 
+
+### Colour
+
+The color scheme is very simple in nature to align with the crisp design of the site, three colours have been used throughout - white, blue & yellow. 
+- #0b2f47
+- #4ba5cd
+- #f2cc59
+
+![Colour Palette](static/images/readme_images/colour-palette.png)
+
+### Typography
+
+In line with the website's simple and clean design, Only one font has been used throughout - Montserrat! 
+
+![Google Fonts](static/images/readme_images/readme-googlefont.png)
+
+--- 
