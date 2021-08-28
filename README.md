@@ -8,7 +8,7 @@
 
 --- 
 
-## <p align="center"> Introduction
+# <p align="center"> Introduction
 
 Welcome to The Dog Shop - a dedicated store for site users to purchase dog related products. The site also has a dedicated blog section where our dog experts post relevant articles related to dog’s health and wellbeing. Site users can interact with blog posts by adding comments on posts and interacting with other site users. The store is of course fictional and for educational purposes only. 
 
@@ -16,7 +16,7 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 
 --- 
 
-## Contents
+# Contents
 
 - [**User Experience (UX)**](#ux)
   - [User Stories](#user-stories)
@@ -291,3 +291,61 @@ In line with the website's simple and clean design, Only one font has been used 
 ![Google Fonts](static/images/readme_images/readme-googlefont.png)
 
 --- 
+
+# <p align="center"> Features
+
+## Existing Features
+
+- My Account link that only displays links to sing in or register when in a non logged in state. 
+- A shopping bag in the navbar that displays total spend as the user adds products to their bag. Total spend increase/decreases as the user adds/removes products from their bag. 
+- One clear CTA on the main page. 
+- A sign up page that allows new users to create an account, which will allow the user to interact with the site
+- A sign in page that will allow existing members to sign into their account in order to interact with the site
+- Clear messaging to warn the user of specific actions - for example, advising the customer that a user name already exists if they try to create an account using a username that has already been taken.
+- Clear messaging to warn the customer when they enter the wrong username and/or password when signing in
+- Clear messaging to advise the customer that they have successfully created an account, logged out or logged in. 
+User authentication. 
+- Email verification requirements to ensure user and site security. Users are sent a link to their email address to verify identity. 
+- Ability to reset password. 
+All forms have validation to ensure the user enters the required parameters in each form throughout the site.
+- A quantity selector button to allow users to increase or decrease products before adding to their shopping bag. 
+- A quantity selector in the shopping bag page to allow users to adjust and update the items in their bag. 
+- Sort selector in the products page, allowing users to sort products. 
+- Search bar in the navbar to allow users quick access to their required products. 
+- Pop up Modal when a user adds an item to their bag, providing visual indication of event along with the product added, total items currently in bag and total spend so far. 
+- Free delivery messaging within the pop up modal with exact amount of spend required to qualify for free delivery - if shopping spend currently has not reached free delivery threshold. 
+Order summary including product image displayed on checkout page. 
+- Ability for users to create an account or sign in when on the checkout page - in order to save their information. 
+- Messaging underneath the payment section showing total cost being charged to the card. 
+- Personalised checkout success page showing order number, confirmation and order summary. 
+- Email receipt of order sent to users e-mail address, containing order number, confirmation and order summary. 
+- Personalised profile page showing full order history - if user purchases while logged in. 
+- Privilege level user group access, including super user only access to Product Management and Blog Management of the site. 
+- Site user ability to add comments to individual blog posts when logged into their account. 
+- Site user ability to delete their own individual comments when signed into their account. 
+- Site user ability to add and update their personal information within their personalised profile page. 
+- Superuser ability to add, edit and delete products on the site. 
+- Superuser ability to add, edit and delete blog posts on the site. 
+- Superuser ability to save unpublished blog posts to their profile section, enabling them to edit and publish at a later date. 
+- Ability to add images to products and blog posts.
+- Superuser ability to delete all user comments. 
+- Defensive programming techniques used to prevent unintended actions - for example, any features that can be deleted will trigger a warning modal asking the user to reconfirm their intent. 
+- Superuser privilege only actions locked down to improve security and avoid malicious activity - for example, any user attempting to by manually navigate to a superuser only page will be displayed with a warning message that they do not have the required access. 
+
+## Features Left to Implement
+
+- Adding site user comments history to their personal profile page. 
+- Ability for users to edit their comments. 
+- Ability for users to reply directly to other site user comments to increase interactivity. 
+- Ability for users to up/down vote other users' comments and site owner blog posts. 
+- Dedicated contact page for users to contact the site owner through additional methods outside the current social media links.  
+- A like / helpful button which will allow users to like blog posts. 
+- Ability for users to sign up to email newsletters. 
+- Admin functionality that will allow admin to moderate comments as the site grows.
+- Additional payment methods - like google pay, paypal etc. 
+- Ability to save payment information. 
+- Stripe discount functionality to enable discount codes. 
+
+--- 
+
+
