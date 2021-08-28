@@ -242,3 +242,25 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 > - A simple fixed footer that contains links to the company social media accounts. The footer will only be present on larger screens and will not be visible on mobile devices to improve the mobile shopping experience.  
 
 --- 
+
+## Skeleton
+
+- The website has been designed to allow the user to navigate through the journey effortlessly. 
+- The My Account section within the nav bar is designed to display relevant to whether the user is logged into the site or not. 
+- The user will flow through the shopping journey from product selection through to payment. 
+- The user will be able to create an account easily so that they can save/update their information and review order history in a dedicated profile page.
+- Once logged in, the user will also be able to comment on blog posts. They will have the ability to delete comments, but not edit. 
+- If user logs out, they will be asked to confirm before being navigated to the home page. 
+- If the user logs out, their shopping bag session will end and bag contents set to zero. 
+
+### Wireframes
+
+All wireframes were created using [Balsamic](https://balsamiq.com/).
+
+
+The wireframes for this project can be found below.
+
+- [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_mobile.pdf)
+- [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_desktop.pdf)
+
+
