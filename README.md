@@ -257,11 +257,10 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 
 All wireframes were created using [Balsamic](https://balsamiq.com/).
 
+The wireframes for both mobil and desktop can be found below.
 
-The wireframes for this project can be found below.
-
-- [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_mobile.pdf)
-- [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop/static/docs/wireframes_desktop.pdf)
+- [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/static/docs/wireframes_mobile.pdf)
+- [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/static/docs/wireframes_desktop.pdf)
 
 --- 
 
@@ -394,7 +393,7 @@ Order summary including product image displayed on checkout page.
 
 # <p align="center">Testing
 
-## W3C Validation
+### W3C Validation
 
 The following pages were passed through the official W3C validation site with no errors returning:
 
@@ -418,10 +417,195 @@ The following files were passed through JSHint with no warnings detected.
 
 - blog_elements.js
 - product_elemets.js
+- strip_elements.js
+
+stripe_elements.js threw up some errors which were resolved by adding `/*jshint esversion: 6 */` to the top of the file. One additional error remained which was a missing semi collon. 
+
+![JShint Results](static/images/readme_images/js-hint.png)
 
 ### PEP8 Python Validator
 
-All .py files in this project were passed through the PEP8 Python Validator successfully. 
+PEP8 was used to ensure that all Python code meets PEP8 requirements. All .py files in this project were passed through the PEP8 Python Validator successfully. 
+
+### Browser Validation
+- In addition to testing on google chrome, I tested the game fully on the Safari and Firefox browsers.
+- Firefox: All tests successful.
+- Safari: All tests successful.
+
+### Manual Device Check:
+
+I checked the site manually on the following devices - all pages check checked separately.
+- Samsung S10
+- Iphone X
+- Macbook Pro 
+- Dell Laptop
+- Ipad Pro
+- Samasung Tablet
+- Monitor Screen 
+
+#### Link And Hover Validation
+I went through each page individually to manually check that all links & hover styling worked as intended. This test was performed on both mobile and desktop devices. 
+
+index.html: 
+> - First call to action link on the hero image.
+> - Nav Bar: All product links.
+> - My account when not logged in state: 
+>   - Register, 
+>   - Log in. 
+> - My Account when logged in state: 
+>   - Product Admin, 
+>   - Blog Admin, 
+>   - My Profile, 
+>   - Log Out.
+
+Products.html
+> - Product image link 
+> - Edit product link
+> - Delete product modal
+
+Product_detail.html
+>  - Quantity selector
+>  - Continue shopping link
+>  - Add to bag link
+>  - Bag Toast Pop Up
+>  - Secure checkout link 
+
+Bag.html
+>  - Quantity selector
+>  - Continue shopping link
+>  - Secure checkout link
+
+Checkout.html
+> - Adjust bag link 
+> - Complete order link 
+> - Checkout_success.html: back to store link
+
+Blog.html
+> - Readmore link 
+
+Blog_detail.html
+> - Edit blog button
+> - Delete blog button
+> - Submit comment
+> - Delete comment 
+
+Product Admin
+> - Add Product and image
+
+Blog Admin
+> - Add blog and image
+> - Save blog and image
+
+### Form Validation
+
+- Sign in form: 
+    - Checked on both mobile, ipad and desktop devices. 
+    - Submit form without username added to ensure input field ‘required’ attribute was working correctly and alert displayed prompted customer to add input. 
+    - Submit form without password added to ensure input field ‘required’ attribute was working correctly and alert displayed prompted customer to add input.
+
+- Sign up form 
+    - Checked on both mobile, ipad and desktop devices. 
+    - Submit form without email address added to ensure input field ‘required’ attribute was working correctly and alert displayed prompted customer to input email address. 
+    - Submit form without name added to ensure input field ‘required’ attribute was working correctly and alert displayed prompted customer to input email address.
+
+- Add Product Form: 
+    - Submitted fully filled in product and reviewed on main products page to ensure review displayed as intended. 
+    - Tested adding images.
+    - Checked Django Admin to ensure data captured correctly
+
+- Add Blog Form: 
+    - Submitted fully filled in blog post and reviewed on blog page to ensure new blog displayed as intended. 
+    - Checked Django Admin to ensure data captured correctly
+    - Tested adding images.
+
+- Edit Product Form: 
+    - Submitted fully filled in product edit and reviewed on product page to ensure new product displayed as intended. 
+    - Tested adding new images.
+    - Checked Django Admin to ensure data captured correctly
+
+- Edit blog Form: 
+    - Submitted fully filled in blog edit and reviewed on blog page to ensure new updated blog displayed as intended. 
+    - Tested adding new images.
+    - Checked Django Admin to ensure data captured correctly
+
+- Delete Modal: 
+  - Fully tested delete model for both product, blog and comments items to ensure modal pop up was presented as intended, and that product/blog/comment was deleted on confirmation. 
+  - Checked Django Admin to ensure product/blog removed.
+
+### Additional Manual Testing:
+Super user/admin user has access to the:
+- Access to the django admin panel.
+- Ability to add and edit products on the main products and individual products pages.
+- Product admin page to add products directly to store.
+- Superuser only profile page which shows unpublished blogs.
+- Blog admin page to add blogs directly to store, or create drafts with ability to save for later. 
+- Ability to delete all user comments on blog posts
+
+Toast pop ups display when:
+- a site user creates and account, signs in or logs out of their account
+- a user adds a product to their bag
+- a user updates a product in their bag.
+- A user updates information in their profile
+- A user makes a purchase
+- A user adds or deletes a comment
+- An Admin edits or deletes a product 
+- An Admin edits or deletes a blog post
+- A user attempts to access or use an site owner only page
+- An Admin deletes a blog post or comment
+
+### Email Validation
+
+Email verification sent succesfull when account created with link tested:
+
+![email verification](static/images/readme_images/email-verification.png)
+
+Email order confirmation sent succesfully after payment succesful with link tested:
+
+![order confirmation email](static/images/readme_images/email-subject.png)
+
+![order confirmation email](static/images/readme_images/email-body.png)
+
+### Image Validation
+
+-   I went through each page to ensure all images displayed correctly. 
+-   I went through each file to ensure all Alt Text had been applied correctly to each image url to validate accessibility requirements.
+- the image rendered on the edit product/blog form was squashed. I will look to improve this in a future release as this is not displayed on the customer facing part of the site, so less of a priority.
+
+### Site Performance Validation
+
+#### First Test
+
+![Lighthouse Report](static/images/readme_images/lighthouse_image-1.png)
+
+The first report from lighthouse returned poor scores for best practice. Reasons outlined below. 
+
+- Best Practices: Failing elements where:
+  - Content Best PracticesFormat your HTML in a way that enables crawlers to better understand your app’s content.
+  - Document does not have a meta description
+
+To reseove this I added a meta description tag: `<meta name="description" content="Animal products and services - The Dog Shop"/>`
+
+#### Second Test
+
+With this issues fixed, the site now returns a stronger lighthouse performance score across all key measures:
+
+![Lighthouse Report](static/images/readme_images/lighthouse_image-2.png)
+
+lighthouse perfromance testing was then carried out on all othersite pages. 
+
+### Stripe Testing
+
+I tested Stripe payments by sending test webhooks: All tests successful.
+
+![Stripe Tests](static/images/readme_images/stripe-wh.png)
+
+
+
+
+ 
+
+
+
 
 
 
