@@ -39,7 +39,8 @@ def post_detail(request, post_id):
             messages.success(request, 'Comment successfully posted')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, 'Oops, something went wrong! Please try again')
+            messages.error(
+                request, 'Oops, something went wrong! Please try again')
             return redirect(reverse('post_detail', args=[post.id]))
     else:
         comment_form = CommentForm()
@@ -57,7 +58,7 @@ def post_detail(request, post_id):
 @login_required
 def add_post(request):
     """ A view to add blog posts """
-    
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -71,7 +72,8 @@ def add_post(request):
             messages.success(request, 'Your blog was posted successfully!')
             return redirect('blog_posts')
         else:
-            messages.error(request, 'Oops, something went wrong! Please try again')
+            messages.error(
+                request, 'Oops, something went wrong! Please try again')
             return redirect('add_post')
     else:
         post_form = PostForm()
@@ -99,7 +101,9 @@ def edit_post(request, post_id):
             messages.success(request, f'{post.title} Successfully Updated')
             return redirect(reverse('post_detail', args=[post.id]))
         else:
-            messages.error(request, f'Something went wrong, {post.title} not updated please try again')
+            messages.error(
+                request, f'Something went wrong, {post.title} \
+                not updated please try again')
     else:
         post_form = PostForm(instance=post)
         messages.info(request, f'You are currently editing {post.title}')
@@ -109,7 +113,7 @@ def edit_post(request, post_id):
         'post_form': post_form,
         'post': post,
     }
-    
+
     return render(request, template, context)
 
 
@@ -130,7 +134,7 @@ def delete_post(request, post_id):
 @login_required
 def delete_comment(request, comment_id):
     """ A view to delete blog comments """
-    
+
     comment = get_object_or_404(Comment, pk=comment_id)
     comment.delete()
     messages.success(request, 'Comment deleted!')

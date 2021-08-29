@@ -16,6 +16,7 @@ class PostAdmin(admin.ModelAdmin):
         'status',
     )
 
+
 class CommentAdmin(admin.ModelAdmin):
 
     list_display = (

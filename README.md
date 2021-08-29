@@ -398,5 +398,31 @@ Order summary including product image displayed on checkout page.
 
 The following pages were passed through the official W3C validation site with no errors returning:
 
+- index.html: No errors or warnings to show.
+- products.html: No errors or warnings to show.
+- product_detail.html: No errors or warnings to show.
+- checkout.html: No errors or warnings to show.
+- checkout-success.html: No errors or warnings to show.
+- blog.html: No errors or warnings to show.
+- blog_detail.html: No errors or warnings to show.
+
+![HTML Validator Results](static/images/readme_images/html_validator.png)
+
+- base.css: Congratulations! No Error Found.
+
+![CSS Validator Results](static/images/readme_images/css_validator.png)
+
+### JSHint
+
+The following files were passed through JSHint with no warnings detected.
+
+- blog_elements.js
+- product_elemets.js
+
+### PEP8 Python Validator
+
+All .py files in this project were passed through the PEP8 Python Validator successfully. 
+
+
 
 

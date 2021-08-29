@@ -9,7 +9,8 @@ STATUS = (
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
     blog_content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -25,7 +26,8 @@ class Post(models.Model):
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
     comment_content = models.TextField(null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
