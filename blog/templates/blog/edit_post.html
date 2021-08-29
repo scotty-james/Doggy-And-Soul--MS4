@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="bg-overlay"></div>
-<div class="container">
+<div class="container container-pd">
     <div class="row">
         <div class="col-12">
             <h2 class="header-font mb-4 pt-4 text-center">Blog Management</h2>
@@ -35,7 +35,7 @@
                 {% endfor %}
                 <div class="text-center mt-2">
                     <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit">Edit Post</button>
-                    <button class="btn btn-sm btn-blue rounded-1 text-uppercase"
+                    <a class="btn btn-sm btn-blue rounded-1 text-uppercase"
                         href="{% url 'blog_posts' %}">Cancel</a>
                 </div>
             </form>
@@ -46,5 +46,10 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script src="{% static 'blog/js/blog_elements.js' %}"></script>
+<script>
+    $('#new-image').change(function() {
+        var file = $('#new-image')[0].files[0];
+        $('#filename').text(`Image will be set to: ${file.name}`);
+    });
+</script>
 {% endblock %}

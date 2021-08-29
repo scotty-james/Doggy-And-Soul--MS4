@@ -74,8 +74,7 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
@@ -107,8 +106,7 @@
                                         Delete</a>
                                     </small>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="delete-product{{ product.id }}" tabindex="-1"
-                                        role="dialog" aria-hidden="true">
+                                    <div class="modal fade" id="delete-product{{ product.id }}" tabindex="-1" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">

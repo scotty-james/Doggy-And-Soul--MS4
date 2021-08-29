@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<main class="container">
+<div class="container">
     <div class="bg-overlay"></div>
     <div class="row">
         <div class="col mt-3">
@@ -40,11 +40,9 @@
                     {% if post.user == request.user or request.user.is_superuser %}
                     <small class="text-uppercase text-blue">
                         <a href="{% url 'edit_post' post.id %}">Edit |</a>
-                    </small>
-                    <!-- Button trigger modal -->
-                    <small type="button" class="text-danger text-uppercase" data-toggle="modal"
+                        <a role="button" class="text-danger text-uppercase" data-toggle="modal"
                         data-target="#Blog-model">
-                        Delete
+                        Delete</a>
                     </small>
                     <!-- Delete Button Modal -->
                     <div class="modal fade" id="Blog-model" tabindex="-1" role="dialog" aria-labelledby="Blog-model"
@@ -52,7 +50,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="Blog-model">Delete Blog Post: {{ post.title }} </h5>
+                                    <h5>Delete Blog Post: {{ post.title }} </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -89,13 +87,12 @@
                     <p class="text-black mb-2 mt-3">{{ comment.comment_content }}</p>
                     {% if comment.user == request.user or request.user.is_superuser %}
                     <!-- Delete Button trigger modal -->
-                    <small type="button" class="text-danger text-uppercase" data-toggle="modal"
+                    <a role="button" class="text-danger text-uppercase small" data-toggle="modal"
                         data-target="#delete-comment{{ comment.id }}">
                         Delete Comment
-                    </small>
+                    </a>
                     <!-- Delete Button Modal -->
-                    <div class="modal fade" id="delete-comment{{ comment.id }}" tabindex="-1" role="dialog"
-                        aria-labelledby="delete-commentTitle" aria-hidden="true">
+                    <div class="modal fade" id="delete-comment{{ comment.id }}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -131,7 +128,7 @@
                         {% csrf_token %}
                         <fieldset>
                             {{ comment_form|crispy }}
-                            <fieldset>
+                        </fieldset>
                                 <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit"><i
                                         class="fas fa-paper-plane"></i> Post
                                     Comment</button>
@@ -145,6 +142,7 @@
             </div>
             {% endif %}
         </div>
-</main>
+    </div>
+</div>
 
 {% endblock %}

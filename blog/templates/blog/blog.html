@@ -33,9 +33,9 @@
             <div class="card p-1 mt-3">
                 <div class="">
                     {% if post.image %}
-                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="" />
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}"/>
                     {% else %}
-                    <img src="{{ post.image_url }}" alt="{{ post.title }}" class="" />
+                    <img src="{{ post.image_url }}" alt="{{ post.title }}"/>
                     {% endif %}
                 </div>
                 <p class="text-uppercase text-black mt-3">{{ post.title }}</p>
