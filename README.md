@@ -345,7 +345,50 @@ Order summary including product image displayed on checkout page.
 - Additional payment methods - like google pay, paypal etc. 
 - Ability to save payment information. 
 - Stripe discount functionality to enable discount codes. 
+- Ability for users to sign in using their social media accounts to allow for a more seamless user experience when signing in or creating accounts. 
 
 --- 
+
+# <p align="center"> Technologies Used
+
+## Languages
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Python](https://www.python.org/)
+* [JQuery](https://jquery.com/)
+
+
+## Frameworks and Libraries
+
+- [Django](https://www.djangoproject.com/) - was used as the core  web framwork for the site.
+- [SQLite 3](https://www.sqlite.org/index.html) - was used for the webapp's databases.
+- [Postgres](https://www.postgresql.org/) - was used for database management.
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/) - was used for account authentification, registration and management.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - was used for the form redering on the site.
+- [Pip3](https://pip.pypa.io/) - was used to install the required packages to run python.
+- [DJ Database](https://pypi.org/project/dj-database-url/) - was used for DATABASE_URL management.
+- [Stripe](https://stripe.com) - was used for site's payment handling.
+- [Heroku](https://www.heroku.com/) - was used to deploy the webapp. 
+- [Gunicorn](https://gunicorn.org/) - was used for the python server implementation.
+- [Psycopg2](https://pypi.org/project/psycopg2/) - was used as a Postgres python database adapter.
+- [django-storages](https://django-storages.readthedocs.io/en/latest/) - used for backend custom storages.
+- [RandomKeygen](https://randomkeygen.com/) - Used to generate a random number which was used as the web app's SECRET_KEY.
+- [Pillow](https://pillow.readthedocs.io/en/stable/) - was used for image processing on the site.
+- [AWS S3](https://aws.amazon.com/s3/) - was used to store static and media files.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - was used to manage the AWS services.
+- [Bootstrap4](https://getbootstrap.com/) - was used to build core components of the website, inc the footer and the model structure.
+- [Google Fonts](https://fonts.google.com/) - was used to select the text font to be used throughout the site.
+- [Font Awesome](https://fontawesome.com/) - was used to display icons throughout the website.
+- [Gitpod](https://gitpod.io/) - was used as my IDE.
+- [Git](https://git-scm.com/) - was used for version control via VS code by providing regular commits to Git, and pushing to GitHub.
+- [GitHub](https://github.com/) - for my Git repository.
+- [Balsamic](https://balsamiq.com/) - was used to create the website wireframes.
+- [Tinyjpg](https://tinyjpg.com/) - was used for image resizing.
+- [Favicon Generator](https://favicon.io/favicon-converter/) - was used for generating the site favicon.
+- [PEP8](http://pep8online.com/) - was used to validate the code for the website. 
+- [JS Hint](https://jshint.com/) - was used to validate the javascript code within the website. 
+- [Jigsaw](https://jigsaw.w3.org/css-validator/) - was used to vaidate all CSS code. 
+- [W3C Markup Validation](https://validator.w3.org/#validate_by_input) - was used to validate the HTML within the code base. 
+ 
 
 
