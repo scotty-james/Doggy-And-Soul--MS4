@@ -390,5 +390,13 @@ Order summary including product image displayed on checkout page.
 - [Jigsaw](https://jigsaw.w3.org/css-validator/) - was used to vaidate all CSS code. 
 - [W3C Markup Validation](https://validator.w3.org/#validate_by_input) - was used to validate the HTML within the code base. 
  
+--- 
+
+# <p align="center">Testing
+
+## W3C Validation
+
+The following pages were passed through the official W3C validation site with no errors returning:
+
 
 

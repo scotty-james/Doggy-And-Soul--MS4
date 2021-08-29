@@ -4,7 +4,9 @@
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col"></div>
+        <div class="col">
+            
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -46,9 +48,8 @@
                 <!-- Button trigger modal -->
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit |</a>
-                </small>
-                <small type="button" class="text-danger" data-toggle="modal" data-target="#exampleModalCenter">
-                    Delete
+                    <a role="button" class="text-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                        Delete</a>
                 </small>
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
