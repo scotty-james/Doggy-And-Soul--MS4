@@ -411,6 +411,16 @@ The following pages were passed through the official W3C validation site with no
 
 ![CSS Validator Results](static/images/readme_images/css_validator.png)
 
+Blog and Product editing pages:
+- Edit-post.html
+- Edit_product.html
+
+Site validation on both these pages failed due to a Duplicate ID error:  
+
+![CSS Validator Results](static/images/readme_images/dup-id-image-error.png)
+
+This is explained more in the Fixed Bugs section.
+
 ### JSHint
 
 The following files were passed through JSHint with no warnings detected.
@@ -601,8 +611,37 @@ I tested Stripe payments by sending test webhooks: All tests successful.
 
 
 
-
+### Fixed Bugs
  
+Blog and Product editing pages:
+- Edit-post.html
+- Edit_product.html
+
+Site validation on both these pages failed due to a Duplicate ID error:  
+
+![Duplicate ID Error](static/images/readme_images/dup-id-image-error.png)
+
+I found this a fairly difficult error to trace back, but after a lot of searching and reading previous comments in the group slack channel, I noticed that the first error was attributed to the fact I had created 2 separate customer_clearable_file_input.html files - one each for the Blog and Product Apps. 
+
+![Duplicate ID Error](static/images/readme_images/custom-file-error.png)
+
+Steps taken to fix:
+
+- Delete the customer widgets template from the blog app - including the customer_clearable_file_input.html file. 
+- Delete the widgets.py file from the blog app.
+- In the blog app forms.py, import CustomerClearableFileInput from product.widgets.
+- This continued to throw the same error. I then changed the file ID name to match the duplicate ID error I was getting to see if this would fix the issue - `new-image` to `id_image`. 
+- I changed this in the custom clearable file input file and also the associated JS code. 
+
+This seemed to fix the issue, but another issue was now present where the file input was now displayed as an Input field on the front end. 
+
+![Duplicate Id Error](static/images/readme_images/dup-id-image-error-2.png)
+
+![Duplicate Id Error](static/images/readme_images/dup-id-image-error-2.1.png)
+
+To resolve this, I changed the input type from `id_image` to `‘file’` in the customer clearable input file (`Select Image <input type="file"`) and retested. This then finally resolved the issue and all both edit product and edit post files passed through validation successfully.
+
+![Duplicate Id Error](static/images/readme_images/dup-id-image-fix.png)
 
 
 
