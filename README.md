@@ -409,7 +409,7 @@ The following pages were passed through the official W3C validation site with no
 
 - base.css: Congratulations! No Error Found.
 
-![CSS Validator Results](static/images/readme_images/css_validator.png)
+![Duplicate ID Error](static/images/readme_images/css_validator.png)
 
 Blog and Product editing pages:
 - Edit-post.html
@@ -417,9 +417,18 @@ Blog and Product editing pages:
 
 Site validation on both these pages failed due to a Duplicate ID error:  
 
-![CSS Validator Results](static/images/readme_images/dup-id-image-error.png)
+![Duplicate ID Error](static/images/readme_images/dup-id-image-error.png)
 
 This is explained more in the Fixed Bugs section.
+
+- Bag.html: 
+
+Site validation failed on this page also due a different Duplicate ID error: 
+
+![Duplicate ID Error](static/images/readme_images/dup-id-error-bag.png)
+
+Resolution details contained in the fixed bugs section.
+
 
 ### JSHint
 
@@ -643,8 +652,9 @@ To resolve this, I changed the input type from `id_image` to `‘file’` in the
 
 ![Duplicate Id Error](static/images/readme_images/dup-id-image-fix.png)
 
+Duplicate ID error in the shopping bag page:
 
-
+This was
 
 
 
