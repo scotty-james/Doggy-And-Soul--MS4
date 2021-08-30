@@ -618,11 +618,139 @@ I tested Stripe payments by sending test webhooks: All tests successful.
 
 ![Stripe Tests](static/images/readme_images/stripe-wh.png)
 
+### User Story Testing
+
+## <p align="center"> AS A SITE USER
 
 
-### Fixed Bugs
+> I WANT TO BE ABLE TO: Navigate through the site easily<br>
+SO THAT I CAN: Purchase quickly and efficiently<br>
+
+![User-story-1](static/images/readme_images/user-story-1.png)
+
+> I WANT TO BE ABLE TO: View individual products details<br>
+SO THAT I CAN: Decide if the product is what I need<br>
+
+![User-story-2](static/images/readme_images/user-story-2.png)
+
+> I WANT TO BE ABLE TO: Search for products on the site <br>
+SO THAT I CAN: Find what I need quickly <br>
+
+![User-story-3](static/images/readme_images/user-story-3.png)
+
+> I WANT TO BE ABLE TO: Understand why I need to create and account <br>
+SO THAT I CAN: Make a decision on where to share my personal details <br>
+
+> I WANT TO BE ABLE TO: Make a purchase without having to create an account <br>
+SO THAT I CAN: Do not need to share my personal details <br>
+
+![User-story-4](static/images/readme_images/user-story-4.png)
+
+> I WANT TO BE ABLE TO: Create an account <br>
+SO THAT I CAN: Save my personal information<br>
+
+![User-story-5](static/images/readme_images/user-story-5.png)
+
+> I WANT TO BE ABLE TO: Create an account <br>
+SO THAT I CAN: Comment on and share opinions on recent blog posts<br>
+
+![User-story-6](static/images/readme_images/user-story-6.png)
+
+> I WANT TO BE ABLE TO: Receive email confirmation when creating an account <br>
+SO THAT I CAN: Have confirmation that it was successful<br>
+
+![email verification](static/images/readme_images/email-verification.png)
+
+> I WANT TO BE ABLE TO: Reset my password <br>
+SO THAT I CAN: Access my account if I forget my password<br>
+
+![User-story-7](static/images/readme_images/user-story-7.png)
+
+> I WANT TO BE ABLE TO: Have a personal profile page <br>
+SO THAT I CAN: View my order history <br>
+
+![User-story-8](static/images/readme_images/user-story-8.png)
+
+> I WANT TO BE ABLE TO: Select quantity of individual products <br>
+SO THAT I CAN: Purchase the right quantity I require <br>
+
+![User-story-9](static/images/readme_images/user-story-9.png)
+
+> I WANT TO BE ABLE TO: Be able to delete any personal comments posted <br>
+SO THAT I CAN: Full control over my content <br>
+
+![User-story-10](static/images/readme_images/user-story-10.png)
+
+> I WANT TO BE ABLE TO: Be notified when I add a product to my shopping bag <br>
+SO THAT I CAN: I can easily see what I am buying<br>
+
+![User-story-12](static/images/readme_images/user-story-12.png)
+
+> I WANT TO BE ABLE TO: See the total cost of my purchase before paying <br>
+SO THAT I CAN: Know how my will be charged to be debit/credit card<br>
+
+![User-story-13.1](static/images/readme_images/user-story-13.1.png)
+![User-story-13](static/images/readme_images/user-story-13.png)
+
+> I WANT TO BE ABLE TO: See a payment success or failure message<br>
+SO THAT I CAN: Verify that my purchase has been successful<br>
+
+![User-story-14](static/images/readme_images/user-story-14.png)
+
+> I WANT TO BE ABLE TO: Receive a confirmation email after making a purchase<br>
+SO THAT I CAN: Have a receipt and record of my purchase<br>
+
+![order confirmation email](static/images/readme_images/email-subject.png)
+
+![order confirmation email](static/images/readme_images/email-body.png)
+
+## <p align="center"> AS A SITE OWNER
+
+> I WANT TO BE ABLE TO: Add products to the store from the front end <br>
+SO THAT I CAN: Quickly add new products to the site <br>
+
+![User-story-15](static/images/readme_images/user-story-15.png)
+
+> I WANT TO BE ABLE TO: Edit products on the front end <br>
+SO THAT I CAN: Update products details on the site <br>
+
+![User-story-16](static/images/readme_images/user-story-16.png)
+
+> I WANT TO BE ABLE TO: Delete products from the front end <br>
+SO THAT I CAN: Remove products from the site <br>
+
+![User-story-17](static/images/readme_images/user-story-18.1.png)
+
+> I WANT TO BE ABLE TO: Add blog posts to the site <br>
+SO THAT I CAN: Share relevant information with the site user <br>
+
+![User-story-19](static/images/readme_images/user-story-17.png)
+
+> I WANT TO BE ABLE TO: Edit blog posts on the site <br>
+SO THAT I CAN: Update the content easily <br>
+
+![User-story-20](static/images/readme_images/user-story-18.png)
+
+> I WANT TO BE ABLE TO: Save draft blog posts in my profile <br>
+SO THAT I CAN: Access and finish at a later time before posting to the site <br>
+
+> I WANT TO BE ABLE TO: View all saved draft blog posts in my admin profile <br>
+SO THAT I CAN: Easily see all unpublished blog posts<br>
+
+![User-story-4](static/images/readme_images/user-story-19.1.png)
+![User-story-4](static/images/readme_images/user-story-19.png)
+
+> I WANT TO BE ABLE TO: Delete blog posts from site<br>
+SO THAT I CAN: Remove content from the site <br>
+
+![User-story-4](static/images/readme_images/user-story-20.png)
+
+
+<br>
+
+## Fixed Bugs
  
-Blog and Product editing pages:
+### Blog and Product editing pages:
 - Edit-post.html
 - Edit_product.html
 
@@ -650,11 +778,31 @@ This seemed to fix the issue, but another issue was now present where the file i
 
 To resolve this, I changed the input type from `id_image` to `‘file’` in the customer clearable input file (`Select Image <input type="file"`) and retested. This then finally resolved the issue and all both edit product and edit post files passed through validation successfully.
 
-![Duplicate Id Error](static/images/readme_images/dup-id-image-fix.png)
+![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
 
-Duplicate ID error in the shopping bag page:
+### Duplicate ID error on the Shopping Bag Page:
 
-This was
+- bag.html
+
+This was another error that really took a bit of time to investigate and understand. The error was coming from the quantity form increment/decrement functionality. The original code for this was taken from the course walk through project ‘Ado Boutique’. The code was originally used in the product details page and adapted for the shopping car to enhance the mobile experience. However, this resulted in the same ID’s being used for different functions. 
+
+Steps taken to fix:
+- Created a new include file within the Bag App called quantity_input_script.html 
+- Added the code from the same named file (quantity_input_script.html) in the Product App. 
+- Analysed the files associated with the script to obtain all ID’s causing the issue, in this case they were:
+  - `id="decrement-qty_{{ item.item_id }}`
+  - `id="increment-qty_{{ item.item_id }}`
+  - `id_qty_{{ item.item_id }}`
+  - `id="remove_{{ item.item_id }}`
+- Changed these ID’s to Classes and removed the ID attribute. 
+Updated the bag/includes/quantity_input_script.html file by changing the itemID attribute to ‘Class’. 
+- Changed name of includes directory file to point towards the the Bag App file, rather than the Products App file. 
+- This resolved the issu. Passing the page through site validation then returned a successful validation.
+
+![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
+
+
+
 
 
 
