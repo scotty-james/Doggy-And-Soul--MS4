@@ -1,6 +1,6 @@
 # <p align="center"> The Dog Shop: Milestone Project 4
 
-![Responsive Designs](static/images/readme_images/readme-image-main.png)
+![Responsive Designs](documents/images/readme_images/readme-image-main.png)
 
 ### <p align="center">The image above is a visual of the site displayed on different devices using [I Am Responsive](http://ami.responsivedesign.is/#)
 
@@ -259,8 +259,8 @@ All wireframes were created using [Balsamic](https://balsamiq.com/).
 
 The wireframes for both mobil and desktop can be found below.
 
-- [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/static/docs/wireframes_mobile.pdf)
-- [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/static/docs/wireframes_desktop.pdf)
+- [Mobile Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/documents/docs/wireframes_mobile.pdf)
+- [Desktop Wireframes](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/documents/docs/wireframes_desktop.pdf)
 
 --- 
 
@@ -281,13 +281,13 @@ The color scheme is very simple in nature to align with the crisp design of the 
 - #4ba5cd
 - #f2cc59
 
-![Colour Palette](static/images/readme_images/colour-palette.png)
+![Colour Palette](documents/images/readme_images/colour-palette.png)
 
 ### Typography
 
 In line with the website's simple and clean design, Only one font has been used throughout - Montserrat! 
 
-![Google Fonts](static/images/readme_images/readme-googlefont.png)
+![Google Fonts](documents/images/readme_images/readme-googlefont.png)
 
 --- 
 
@@ -487,7 +487,7 @@ Order summary including product image displayed on checkout page.
 - [django-storages](https://django-storages.readthedocs.io/en/latest/) - used for backend custom storages.
 - [djecrety](https://djecrety.ir/) - Used to generate a random number which was used as the web app's SECRET_KEY.
 - [Pillow](https://pillow.readthedocs.io/en/stable/) - was used for image processing on the site.
-- [AWS S3](https://aws.amazon.com/s3/) - was used to store static and media files.
+- [AWS S3](https://aws.amazon.com/s3/) - was used to store documents and media files.
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - was used to manage the AWS services.
 - [Bootstrap4](https://getbootstrap.com/) - was used to build core components of the website, inc the footer and the model structure.
 - [Google Fonts](https://fonts.google.com/) - was used to select the text font to be used throughout the site.
@@ -519,11 +519,11 @@ The following pages were passed through the official W3C validation site with no
 - blog.html: No errors or warnings to show.
 - blog_detail.html: No errors or warnings to show.
 
-![HTML Validator Results](static/images/readme_images/html_validator.png)
+![HTML Validator Results](documents/images/readme_images/html_validator.png)
 
 - base.css: Congratulations! No Error Found.
 
-![Duplicate ID Error](static/images/readme_images/css_validator.png)
+![Duplicate ID Error](documents/images/readme_images/css_validator.png)
 
 Blog and Product editing pages:
 - Edit-post.html
@@ -531,7 +531,7 @@ Blog and Product editing pages:
 
 Site validation on both these pages failed due to a Duplicate ID error:  
 
-![Duplicate ID Error](static/images/readme_images/dup-id-image-error.png)
+![Duplicate ID Error](documents/images/readme_images/dup-id-image-error.png)
 
 This is explained more in the Fixed Bugs section.
 
@@ -539,7 +539,7 @@ This is explained more in the Fixed Bugs section.
 
 Site validation failed on this page also due a different Duplicate ID error: 
 
-![Duplicate ID Error](static/images/readme_images/dup-id-error-bag.png)
+![Duplicate ID Error](documents/images/readme_images/dup-id-error-bag.png)
 
 Resolution details contained in the fixed bugs section.
 
@@ -554,14 +554,14 @@ The following files were passed through JSHint with no warnings detected.
 
 stripe_elements.js threw up some errors which were resolved by adding `/*jshint esversion: 6 */` to the top of the file. One additional error remained which was a missing semi collon. 
 
-![JShint Results](static/images/readme_images/js-hint.png)
+![JShint Results](documents/images/readme_images/js-hint.png)
 
 ### PEP8 Python Validator
 
 PEP8 was used to ensure that all Python code meets PEP8 requirements. All .py files in this project were passed through the PEP8 Python Validator successfully. 
 
 ### Browser Validation
-- In addition to testing on google chrome, I tested the game fully on the Safari and Firefox browsers.
+- In addition to testing on google chrome, I tested the site fully on the Safari and Firefox browsers.
 - Firefox: All tests successful.
 - Safari: All tests successful.
 
@@ -665,6 +665,9 @@ Blog Admin
   - Fully tested delete model for both product, blog and comments items to ensure modal pop up was presented as intended, and that product/blog/comment was deleted on confirmation. 
   - Checked Django Admin to ensure product/blog removed.
 
+- Password Reset form
+  - Checked on both mobile, ipad and desktop devices. 
+
 ### Additional Manual Testing:
 Super user/admin user has access to the:
 - Access to the django admin panel.
@@ -690,13 +693,13 @@ Toast pop ups display when:
 
 Email verification sent succesfull when account created with link tested:
 
-![email verification](static/images/readme_images/email-verification.png)
+![email verification](documents/images/readme_images/email-verification.png)
 
 Email order confirmation sent succesfully after payment succesful with link tested:
 
-![order confirmation email](static/images/readme_images/email-subject.png)
+![order confirmation email](documents/images/readme_images/email-subject.png)
 
-![order confirmation email](static/images/readme_images/email-body.png)
+![order confirmation email](documents/images/readme_images/email-body.png)
 
 ### Image Validation
 
@@ -708,7 +711,7 @@ Email order confirmation sent succesfully after payment succesful with link test
 
 #### First Test
 
-![Lighthouse Report](static/images/readme_images/lighthouse_image-1.png)
+![Lighthouse Report](documents/images/readme_images/lighthouse_image-1.png)
 
 The first report from lighthouse returned poor scores for best practice. Reasons outlined below. 
 
@@ -722,7 +725,7 @@ To reseove this I added a meta description tag: `<meta name="description" conten
 
 With this issues fixed, the site now returns a stronger lighthouse performance score across all key measures:
 
-![Lighthouse Report](static/images/readme_images/lighthouse_image-2.png)
+![Lighthouse Report](documents/images/readme_images/lighthouse_image-2.png)
 
 lighthouse perfromance testing was then carried out on all othersite pages. 
 
@@ -730,9 +733,19 @@ lighthouse perfromance testing was then carried out on all othersite pages.
 
 I tested Stripe payments by sending test webhooks: All tests successful.
 
-![Stripe Tests](static/images/readme_images/stripe-wh.png)
+![Stripe Tests](documents/images/readme_images/stripe-wh.png)
 
-### User Story Testing
+### Error Handling 
+
+To ensure that any site error is handled gracefully, a 404 and 505 error handler function was added to the page. The site was tested on all pages to generate the 404 message, which displays a simple message to the user, with a redirect to the home page.
+
+![404](documents/images/readme_images/404_505_error.png)
+
+### Deployment Version 
+
+All testing was completed in both the development version of the site and the deployed version of the site. 
+
+## User Story Testing
 
 ## <p align="center"> AS A SITE USER
 
@@ -740,17 +753,17 @@ I tested Stripe payments by sending test webhooks: All tests successful.
 > I WANT TO BE ABLE TO: Navigate through the site easily<br>
 SO THAT I CAN: Purchase quickly and efficiently<br>
 
-![User-story-1](static/images/readme_images/user-story-1.png)
+![User-story-1](documents/images/readme_images/user-story-1.png)
 
 > I WANT TO BE ABLE TO: View individual products details<br>
 SO THAT I CAN: Decide if the product is what I need<br>
 
-![User-story-2](static/images/readme_images/user-story-2.png)
+![User-story-2](documents/images/readme_images/user-story-2.png)
 
 > I WANT TO BE ABLE TO: Search for products on the site <br>
 SO THAT I CAN: Find what I need quickly <br>
 
-![User-story-3](static/images/readme_images/user-story-3.png)
+![User-story-3](documents/images/readme_images/user-story-3.png)
 
 > I WANT TO BE ABLE TO: Understand why I need to create and account <br>
 SO THAT I CAN: Make a decision on where to share my personal details <br>
@@ -758,92 +771,92 @@ SO THAT I CAN: Make a decision on where to share my personal details <br>
 > I WANT TO BE ABLE TO: Make a purchase without having to create an account <br>
 SO THAT I CAN: Do not need to share my personal details <br>
 
-![User-story-4](static/images/readme_images/user-story-4.png)
+![User-story-4](documents/images/readme_images/user-story-4.png)
 
 > I WANT TO BE ABLE TO: Create an account <br>
 SO THAT I CAN: Save my personal information<br>
 
-![User-story-5](static/images/readme_images/user-story-5.png)
+![User-story-5](documents/images/readme_images/user-story-5.png)
 
 > I WANT TO BE ABLE TO: Create an account <br>
 SO THAT I CAN: Comment on and share opinions on recent blog posts<br>
 
-![User-story-6](static/images/readme_images/user-story-6.png)
+![User-story-6](documents/images/readme_images/user-story-6.png)
 
 > I WANT TO BE ABLE TO: Receive email confirmation when creating an account <br>
 SO THAT I CAN: Have confirmation that it was successful<br>
 
-![email verification](static/images/readme_images/email-verification.png)
+![email verification](documents/images/readme_images/email-verification.png)
 
 > I WANT TO BE ABLE TO: Reset my password <br>
 SO THAT I CAN: Access my account if I forget my password<br>
 
-![User-story-7](static/images/readme_images/user-story-7.png)
+![User-story-7](documents/images/readme_images/user-story-7.png)
 
 > I WANT TO BE ABLE TO: Have a personal profile page <br>
 SO THAT I CAN: View my order history <br>
 
-![User-story-8](static/images/readme_images/user-story-8.png)
+![User-story-8](documents/images/readme_images/user-story-8.png)
 
 > I WANT TO BE ABLE TO: Select quantity of individual products <br>
 SO THAT I CAN: Purchase the right quantity I require <br>
 
-![User-story-9](static/images/readme_images/user-story-9.png)
+![User-story-9](documents/images/readme_images/user-story-9.png)
 
 > I WANT TO BE ABLE TO: Be able to delete any personal comments posted <br>
 SO THAT I CAN: Full control over my content <br>
 
-![User-story-10](static/images/readme_images/user-story-10.png)
+![User-story-10](documents/images/readme_images/user-story-10.png)
 
 > I WANT TO BE ABLE TO: Be notified when I add a product to my shopping bag <br>
 SO THAT I CAN: I can easily see what I am buying<br>
 
-![User-story-12](static/images/readme_images/user-story-12.png)
+![User-story-12](documents/images/readme_images/user-story-12.png)
 
 > I WANT TO BE ABLE TO: See the total cost of my purchase before paying <br>
 SO THAT I CAN: Know how my will be charged to be debit/credit card<br>
 
-![User-story-13.1](static/images/readme_images/user-story-13.1.png)
-![User-story-13](static/images/readme_images/user-story-13.png)
+![User-story-13.1](documents/images/readme_images/user-story-13.1.png)
+![User-story-13](documents/images/readme_images/user-story-13.png)
 
 > I WANT TO BE ABLE TO: See a payment success or failure message<br>
 SO THAT I CAN: Verify that my purchase has been successful<br>
 
-![User-story-14](static/images/readme_images/user-story-14.png)
+![User-story-14](documents/images/readme_images/user-story-14.png)
 
 > I WANT TO BE ABLE TO: Receive a confirmation email after making a purchase<br>
 SO THAT I CAN: Have a receipt and record of my purchase<br>
 
-![order confirmation email](static/images/readme_images/email-subject.png)
+![order confirmation email](documents/images/readme_images/email-subject.png)
 
-![order confirmation email](static/images/readme_images/email-body.png)
+![order confirmation email](documents/images/readme_images/email-body.png)
 
 ## <p align="center"> AS A SITE OWNER
 
 > I WANT TO BE ABLE TO: Add products to the store from the front end <br>
 SO THAT I CAN: Quickly add new products to the site <br>
 
-![User-story-15](static/images/readme_images/user-story-15.png)
+![User-story-15](documents/images/readme_images/user-story-15.png)
 
 > I WANT TO BE ABLE TO: Edit products on the front end <br>
 SO THAT I CAN: Update products details on the site <br>
 
-![User-story-16](static/images/readme_images/user-story-16.png)
+![User-story-16](documents/images/readme_images/user-story-16.png)
 
 > I WANT TO BE ABLE TO: Delete products from the front end <br>
 SO THAT I CAN: Remove products from the site <br>
 
-![User-story-17](static/images/readme_images/user-story-18.1.png)
+![User-story-17](documents/images/readme_images/user-story-18.1.png)
 
 > I WANT TO BE ABLE TO: Add blog posts to the site <br>
 SO THAT I CAN: Share relevant information with the site user <br>
 
-![User-story-19](static/images/readme_images/user-story-17.png)
+![User-story-19](documents/images/readme_images/user-story-17.png)
 
 > I WANT TO BE ABLE TO: Edit blog posts on the site <br>
 SO THAT I CAN: Update the content easily <br>
 
-![User-story-20](static/images/readme_images/user-story-18.png)
+![User-story-20](documents/images/readme_images/user-story-18.png)
 
 > I WANT TO BE ABLE TO: Save draft blog posts in my profile <br>
 SO THAT I CAN: Access and finish at a later time before posting to the site <br>
@@ -851,13 +864,13 @@ SO THAT I CAN: Access and finish at a later time before posting to the site <br>
 > I WANT TO BE ABLE TO: View all saved draft blog posts in my admin profile <br>
 SO THAT I CAN: Easily see all unpublished blog posts<br>
 
-![User-story-4](static/images/readme_images/user-story-19.1.png)
-![User-story-4](static/images/readme_images/user-story-19.png)
+![User-story-4](documents/images/readme_images/user-story-19.1.png)
+![User-story-4](documents/images/readme_images/user-story-19.png)
 
 > I WANT TO BE ABLE TO: Delete blog posts from site<br>
 SO THAT I CAN: Remove content from the site <br>
 
-![User-story-4](static/images/readme_images/user-story-20.png)
+![User-story-4](documents/images/readme_images/user-story-20.png)
 
 
 <br>
@@ -870,11 +883,11 @@ SO THAT I CAN: Remove content from the site <br>
 
 Site validation on both these pages failed due to a Duplicate ID error:  
 
-![Duplicate ID Error](static/images/readme_images/dup-id-image-error.png)
+![Duplicate ID Error](documents/images/readme_images/dup-id-image-error.png)
 
 I found this a fairly difficult error to trace back, but after a lot of searching and reading previous comments in the group slack channel, I noticed that the first error was attributed to the fact I had created 2 separate customer_clearable_file_input.html files - one each for the Blog and Product Apps. 
 
-![Duplicate ID Error](static/images/readme_images/custom-file-error.png)
+![Duplicate ID Error](documents/images/readme_images/custom-file-error.png)
 
 Steps taken to fix:
 
@@ -886,13 +899,13 @@ Steps taken to fix:
 
 This seemed to fix the issue, but another issue was now present where the file input was now displayed as an Input field on the front end. 
 
-![Duplicate Id Error](static/images/readme_images/dup-id-image-error-2.png)
+![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.png)
 
-![Duplicate Id Error](static/images/readme_images/dup-id-image-error-2.1.png)
+![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.1.png)
 
 To resolve this, I changed the input type from `id_image` to `‘file’` in the customer clearable input file (`Select Image <input type="file"`) and retested. This then finally resolved the issue and all both edit product and edit post files passed through validation successfully.
 
-![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
+![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
 
 ### Duplicate ID error on the Shopping Bag Page:
 
@@ -913,7 +926,7 @@ Updated the bag/includes/quantity_input_script.html file by changing the itemID 
 - Changed name of includes directory file to point towards the the Bag App file, rather than the Products App file. 
 - This resolved the issu. Passing the page through site validation then returned a successful validation.
 
-![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
+![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
 
 Additional Bugs fixed:
 
@@ -925,6 +938,15 @@ Additional Bugs fixed:
 | Delete Modal was not deleting the correct product, blogpost or comments. Instead, the Modal was deleted from the oldest item added to the site.| I understood what was happening here and that the Modal would be doing a loop and mostly related to the ID’s associated with it. I finally found some good examples of this error from previous students in the slack community which enabled me to pinpoint the issue. To fix this, I updated the Delete Comment Modal Trigger ID to `id="deleteComment_{{ comment.id }}` and matched that to the Main Modal Data Target Attribute. This then resolved the issue and the Modal began deleting the correct item. I applied this anywhere where there were multiple items on one page - Main Products Page, Blog Page and Comments Page. This was of course not required on the individual product page as there is no need to generate unique ID's. |
 |
 
+### Remaining Bugs:
+
+> Allauth form navigation <br>
+When testing the Allauth pages, the form validation is working correctly and warning the user that they need to input data in the required fields. However, the validation is also powering up when the link to the home page is clicked. This is not correct behaviour as the home button should allow the user to be redirected to the home page without having to fill in any forms Due to time constraints, this bug will be fixed as part of a future release. Although not a great customer experience, the customer can navigate out using other methods, such as the home link in the navbar, logo link, and any other link in the nav. 
+
+> Toast Popup/Time Delay <br> 
+The toast feature is a nice addition to the site. However, there is no time delay and when the event is triggered, the pop up remains on screen until the user clicks on it to remove. This is a poor user experience, especially on mobile. I have decided to keep it as is for now as it is part of the project, however, this will be fixed as part of a future release. 
+
+---
 
 # <p align="center">Version Control Management
 
@@ -940,7 +962,7 @@ For this project, I used Git for version control.
 
 ### Deployment Steps
 
-This website was deployed using Heroku. AWS Amazon is being used to store allmedia and static files. The following steps were taken: 
+This website was deployed using Heroku. AWS Amazon is being used to store allmedia and documents files. The following steps were taken: 
 
 ## Heroku:
 
@@ -965,7 +987,7 @@ Next, run `python3 manage.py migrate`. This will apply all migrations.
 9. Next, install gunicorn which will act as the web server by running `pip3 install gunicorn` in the command line and then save to the requirements.txt file by running the `pip3 freeze > requirements.txt` command. 
 10 Create a Procfile and add `web: gunicorn doggy_and_soul.wsgi:application`. 
 Login to Heroku from the terminal by running `heroku login`. If an error presents, run `heroku login-i`. 
-11. In the command file, run `heroku config:set DISABLE_COLLECTSTATIC = 1 --app the-dog-shop`, this is required to temporarily disable collectstatics. This to avoid Heroku trying to collect static files when deploying. 
+11. In the command file, run `heroku config:set DISABLE_COLLECTdocuments = 1 --app the-dog-shop`, this is required to temporarily disable collectdocumentss. This to avoid Heroku trying to collect documents files when deploying. 
 12. Go to settings.py and add the host name to ‘ALLOWED_HOSTS. It should look like this: `ALLOWED_HOSTS = [‘the-dog-shop’]`
 13. Commit changes using `git add .`, `git commit -m “commit message”` and `git push`.
 14. Initialise heroku by running heroku: `git:remote -a the-dog-shop`. This is required as the app was created from within the Heroku site.
@@ -980,7 +1002,7 @@ Login to Heroku from the terminal by running `heroku login`. If an error present
 
 1. Create a new account or log into AWS and open S3. 
 2. Click on ‘Buckets’, then ‘Create Bucket’. Give the bucket a name, it’s generally a good idea to name it the same as your project, in my case the-dog-shop. Select region and choose bucket to enable. 
-3. Open the new bucket and in the ‘Properties’ tab, click on ‘Static Website Hosting’ and click enable. This will provide a new wicket website endpoint to enable internet access. Add ‘index.html and error.html as default values.
+3. Open the new bucket and in the ‘Properties’ tab, click on ‘documents Website Hosting’ and click enable. This will provide a new wicket website endpoint to enable internet access. Add ‘index.html and error.html as default values.
 4. Open the ‘Permissions’ tab and navigate to CORS. Cors enabled configuration between the S3 bucket and Heroku.
 5. Now set up a bucket policy. To do this, create a new policy from within the ‘policy’ using the AWS policy generator.
 6. his will generate a ARN number which will be in the ‘resource’ field, at the end of the ARN, add /*, this will enable access to all of the resources inside the bucket. 
@@ -1062,6 +1084,9 @@ I identified this issue and knew it had to be resolved. Steps taken below.
 1. Clicked on the active Postgres URL which brought me to the datastores section. 
 3. Clicked on settings and then proceeded to destroy the database. 
 
+![Postgres DB Destroy](documents/images/readme_images/Postgres-error-1.png)
+![Postgres DB Destroy](documents/images/readme_images/Postgres-error-2.png)
+
 ### Set Up a new database. 
 1. Returned back to the Resources tab and created a new Postgres URL. 
 1. Verified that the new URL had been updated in my Heroku config vars. 
@@ -1076,6 +1101,17 @@ I identified this issue and knew it had to be resolved. Steps taken below.
 This was a very good learning opportunity for me in understanding the importance of keeping information safe when building web apps. Luckily, when creating the new database I didn't encounter any further issues and I was able to move forward quickly.
 
 --- 
+
+## <p align="center">Credits
+
+
+## <p align="center"> Acknowledgements
+
+- I would like to thank and acknowledge my mentor Spencer Barriball for his usual encouragement throughout the project and for the helpful tips and recommendations along the way, thank you for your guidance and support throughout the entire course - you have been great!
+
+- The Code Institute Slack Community which continues to be a fantastic resource when troubleshooting. 
+
+---
 
 
 
