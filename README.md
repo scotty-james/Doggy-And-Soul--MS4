@@ -293,7 +293,7 @@ In line with the website's simple and clean design, Only one font has been used 
 
 ## Database Set Up / Models
 
-For the development of the project, [SQLite3](https://www.sqlite.org/index.html), [Heroku Postgres](https://www.heroku.com/postgres) was used for production. There are a total of 7 models built to support the project, each one detailed below. 
+For the development of the project, [SQLite3](https://www.sqlite.org/index.html) was used. [Heroku Postgres](https://www.heroku.com/postgres) was used for production. There are a total of 7 models built to support the project, each one detailed below. 
 
 ## <p align="center">Blog App
 
@@ -485,7 +485,7 @@ Order summary including product image displayed on checkout page.
 - [Gunicorn](https://gunicorn.org/) - was used for the python server implementation.
 - [Psycopg2](https://pypi.org/project/psycopg2/) - was used as a Postgres python database adapter.
 - [django-storages](https://django-storages.readthedocs.io/en/latest/) - used for backend custom storages.
-- [RandomKeygen](https://randomkeygen.com/) - Used to generate a random number which was used as the web app's SECRET_KEY.
+- [djecrety](https://djecrety.ir/) - Used to generate a random number which was used as the web app's SECRET_KEY.
 - [Pillow](https://pillow.readthedocs.io/en/stable/) - was used for image processing on the site.
 - [AWS S3](https://aws.amazon.com/s3/) - was used to store static and media files.
 - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - was used to manage the AWS services.
@@ -914,6 +914,108 @@ Updated the bag/includes/quantity_input_script.html file by changing the itemID 
 - This resolved the issu. Passing the page through site validation then returned a successful validation.
 
 ![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
+
+
+# <p align="center">Version Control Management
+
+For this project, I used Git for version control.
+
+- All code was written in Gitpod.
+- At regular intervals and when new features were added to the site, - I added my files to the staging environment using the `git add .` command.
+- I then committed to the local repository using the `git commit -m` command.
+- I then pushed the local git to my GitHub repository using the `git push` command.
+- Throughout the development lifecycle of the site, I used commit messages that were in the imperative language.
+
+# <p align="center">Deployment
+
+### Deployment Steps
+
+This website was deployed using Heroku. AWS Amazon is being used to store allmedia and static files. The following steps were taken: 
+
+## Heroku:
+
+1. Log into Heroku and click the NEW button. Give the new App a name, this must be unique, select the region closest to you and hit the ‘create app’ button. 
+2. Add a new Heroku Postgres for the DB. To do this, go to resources, add-ons, and search for ‘Heroku Postgres'. 
+3. This will then create a new Database URL that will be automatically added to your Heroku config vars. 
+4. Within your IDE (for this project, I used github), install `dj_database_url` and `psycopg2-binary` - these are both required to enable Postgres. Once installed, save these to the requirements.txt file by running `pip3 freeze > requirements.txt` in the command line. 
+5. Open the settings.py file and head to `DATABASES`. Temporarily comment out the sqlite database and add the following: 
+```
+DATABASES = {
+  'default': dj_database_url.parse('Postgres database URL')
+}
+```
+- The reason for this is to pass the Database to Heroku.
+```
+IMPORTANT: Adding the postgres database url is only to load the DB in Heroku, once finished, this should be removed to avoid unintentionally adding it into version control.
+```
+6. In the command line, run `python3 manage.py showmigrations`. This will show that nothing has been migrated yet.
+Next, run `python3 manage.py migrate`. This will apply all migrations. 
+7. Once migrations have been applied, run `python3 manage.py loaddata categories`, then `python3 manage.py loaddata products`. It is important to run categories first as the products are linked to the categories. 
+8. Next, run the command `python3 manage.py createsuperuser`. Enter superuser details when prompted and this will create admin level registration for the site and django admin. 
+9. Next, install gunicorn which will act as the web server by running `pip3 install gunicorn` in the command line and then save to the requirements.txt file by running the `pip3 freeze > requirements.txt` command. 
+10 Create a Procfile and add `web: gunicorn doggy_and_soul.wsgi:application`. 
+Login to Heroku from the terminal by running `heroku login`. If an error presents, run `heroku login-i`. 
+11. In the command file, run `heroku config:set DISABLE_COLLECTSTATIC = 1 --app the-dog-shop`, this is required to temporarily disable collectstatics. This to avoid Heroku trying to collect static files when deploying. 
+12. Go to settings.py and add the host name to ‘ALLOWED_HOSTS. It should look like this: `ALLOWED_HOSTS = [‘the-dog-shop’]`
+13. Commit changes using `git add .`, `git commit -m “commit message”` and `git push`.
+14. Initialise heroku by running heroku: `git:remote -a the-dog-shop`. This is required as the app was created from within the Heroku site.
+15. Push changes to Heroku by running `git push heroku main` - this will deploy to heroku.
+16. Head back to Heroku and click on the ‘Deploy’ tab. Search for the site github repository by typing in the repository name, connect the repository and click ‘Enable Automatic Deploys’.
+17. Generate a secret key and add to the heroku config variables. I used [djecrety](https://djecrety.ir/) to generate a secret key for this project. 
+18. Open settings.py and change the secret key variable with a call to get it from the environment - `SECRET_KEY = os.environ.get(‘SECRET_KEY’, ‘ ‘)`.
+19. Change `DEBUG = TRUE` to `DEBUG = 'DEVELOPMENT' in os.environ`.
+20. Finally commit changes to github. Heading back to Heroku, the build should be running in the ‘Activity’ tab. 
+
+## Amazon AWS
+
+1. Create a new account or log into AWS and open S3. 
+2. Click on ‘Buckets’, then ‘Create Bucket’. Give the bucket a name, it’s generally a good idea to name it the same as your project, in my case the-dog-shop. Select region and choose bucket to enable. 
+3. Open the new bucket and in the ‘Properties’ tab, click on ‘Static Website Hosting’ and click enable. This will provide a new wicket website endpoint to enable internet access. Add ‘index.html and error.html as default values.
+4. Open the ‘Permissions’ tab and navigate to CORS. Cors enabled configuration between the S3 bucket and Heroku.
+5. Now set up a bucket policy. To do this, create a new policy from within the ‘policy’ using the AWS policy generator.
+6. his will generate a ARN number which will be in the ‘resource’ field, at the end of the ARN, add /*, this will enable access to all of the resources inside the bucket. 
+7. Next, create a new user by going to the IAM section (Identify and Access Management) of AWS and select ‘Add User’. 
+8. Next, click on ‘Create Group’ and give it a name. 
+9. Click Policy, then Create Policy. Click on the JSON tab and click ‘import managed policy’ this will import a pre built policy that gives full access to S3. 
+10. Import ‘S3 Full Access Policy’. Head back to S3 and copy the bucket ARN that was created earlier. 
+11. In the bucket policy, paste the ARN into the resource field like below. 
+```
+[ 
+  arn:aws:s3:::<your-bucket-name>",
+  "arn:aws:s3:::<your-bucket-name>/*"
+]
+```
+12. Click review policy and add a name and description then click ‘Create’.
+13. 14. Head to groups, click on the group created earlier, click ‘attach policy’, search for the policy just created, click ‘select’ then ‘attach policy’.
+15. Next, navigate to ‘Users’. Click ‘Add User’, give the user a name, give ‘programmatic access’. 
+16. Click on the group created earlier - this will attach the user to this group. Then finally click ‘Create User’. 
+17. Download the CSV file generated, this will contain the Access Key ID and Secret Access Key.
+```
+IMPORTANT: Once this process is complete, there is no way to access these keys, therefore, it is important to save them once downloaded.
+```
+
+## Config Vars
+
+Finally, all config variables need to be included in Heroku. Head to Heroku and click on the settings tab, then config vars. These variables should also match the variables contained within the env.py file or within the workspace variables if using GitPod.
+
+For this project the following variables are required. 
+
+
+Name | Value
+-----|------
+AWS_ACCESS_KEY_ID|'your_aws_access_key_id'
+AWS_SECRET_ACCESS_KEY|'your_aws_secret_access_key'
+DATABASE_URL|'your_database_url'
+EMAIL_HOST_PASS|'your_email_host_password'
+EMAIL_HOST_USER|'your_email_address'
+SECRET_KEY|'your_secret_key'
+STRIPE_PUBLIC_KEY|'your_stripe_public_key'
+STRIPE_SECRET_KEY|'your_stripe_secret_key'
+STRIPE_WH_SECRET|'your_stripe_wh_key'
+USE_AWS|True
+
+
+
 
 
 
