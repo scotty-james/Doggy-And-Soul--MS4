@@ -291,6 +291,120 @@ In line with the website's simple and clean design, Only one font has been used 
 
 --- 
 
+## Database Set Up / Models
+
+For the development of the project, [SQLite3](https://www.sqlite.org/index.html), [Heroku Postgres](https://www.heroku.com/postgres) was used for production. There are a total of 7 models built to support the project, each one detailed below. 
+
+## <p align="center">Blog App
+
+###  Post Model
+
+| Field | Field Type | Field Options |
+| --- | --- | --- |
+| title | CharField | max_length=200, unique=True|
+| user | ForeignKey | User, on_delete=models.CASCADE, related_name='blog_posts |
+| updated_on | DateTimeField | auto_now=True |
+| date_posted | DateTimeField | auto_now_add=True |
+| blog_content | TextField |  |
+| created_on | DateTimeField | auto_now_add=True |
+| status | IntegerField | choices=STATUS, default=0 |
+| image | ImageField | null=True, blank=True |
+|
+
+
+### Comment Model
+
+---
+| Field | Field Type | Field Options |
+| ---   | --- | --- |
+|user | ForeignKey | User, on_delete=models.CASCADE |
+|post | ForeignKey | Post, on_delete=models.CASCADE, related_name="comments" |
+|comment_content | TextField | null=False, blank=False |
+|created_on | DateTimeField | auto_now_add=True |
+|
+
+## <p align="center">Products App
+
+### Category Model
+
+| Field | Field Type | Field Options |
+| ---   | --- | --- |
+| name  | CharField | max_length=254 |
+| friendly_name  | CharField | max_length=254, null=True, blank=True |
+|
+
+### Product Model
+
+| Field | Field Type | Field Options |
+| --- | --- | --- |
+| name | CharField | max_length=254, null=True |
+| description | TextField |  |
+| price | DecimalField | max_digits=6, decimal_places=2 |
+| has_sizes | BooleanField | default=False, null=True, blank=True |
+| category | ForeignKey | 'Category', null=True, blank=True, on_delete=models.SET_NULL |
+| rating | DecimalField | max_digits=6, decimal_places=2, null=True, blank=True |
+| image | ImageField | null=True, blank=True |
+|
+
+## <p align="center">Checkout App
+
+### Order Model
+
+| Field | Field Type | Field Options |
+| --- | --- | ---|
+| order_number | CharField | max_length=32, null=False, editable=False |
+| user_profile | ForeignKey | serProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
+| full_name | CharField | max_length=50, null=False, blank=False |
+| dog_name | CharField | max_length=50, default=None, null=True, blank=False |
+| email | EmailField | max_length=254, null=False, blank=False |
+| phone_number | CharField | max_length=20, null=False, blank=False) |
+| country | CountryField | blank_label="Country *", null=False, blank=False |
+| postcode | CharField | max_length=20, null=True, blank=True |
+| town_or_city | CharField | max_length=40, null=False, blank=False |
+| street_address1 | CharField | max_length=80, null=False, blank=False |
+| street_address2 | CharField | max_length=80, null=True, blank=True |
+| county | CharField | max_length=80, null=True, blank=True |
+| date | DateTimeField | auto_now_add=True |
+| delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
+| order_total  | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
+| grand_total  | DecimalField | max_digits=10, decimal_places=2, null=False, default=0 |
+| original_bag | TextField | null=False, blank=False, default='' |
+| stripe_pid | CharField | max_length=254, null=False, blank=False, default='' |
+|
+
+### OrderLineItem Model
+
+| Field | Field Type | Field Options |
+| --- | --- | ---|
+| order | ForeignKey | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| product | ForeignKey | Product, null=False, blank=False, on_delete=models.CASCADE |
+| product_size | CharField | max_length=2, null=True, blank=True |
+| quantity | IntegerField | null=False, blank=False, default=0 |
+| lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False |
+|
+
+## <p align="center">Profile App
+
+### UserProfile Model
+
+| Field | Field Type | Field Options |
+| --- | --- | ---|
+| user | OneToOneField | User, on_delete=models.CASCADE |
+| default_full_name | CharField | max_length=20, null=True, blank=True |
+| default_dog_name | CharField | max_length=20, null=True, blank=True |
+| default_phone_number | CharField | max_length=20, null=True, blank=True |
+| default_street_address1 | CharField | max_length=80, null=True, blank=True |
+| default_street_address2 | CharField | max_length=80, null=True, blank=True |
+| default_town_or_city | CharField | max_length=40, null=True, blank=True |
+| default_county | CharField | max_length=80, null=True, blank=True |
+| default_postcode | CharField | max_length=20, null=True, blank=True |
+| default_country | CountryField | blank_label='Country', null=True, blank=True |
+|
+
+<br>
+
+--- 
+
 # <p align="center"> Features
 
 ## Existing Features
