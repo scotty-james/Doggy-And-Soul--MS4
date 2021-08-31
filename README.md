@@ -1014,6 +1014,24 @@ STRIPE_SECRET_KEY|'your_stripe_secret_key'
 STRIPE_WH_SECRET|'your_stripe_wh_key'
 USE_AWS|True
 
+## How To run this Project Locally
+
+
+Steps: 
+
+1. Click [here](https://github.com/scotty-james/the-dog-shop--MS4) to access the site's repository.
+1. Underneath the repository name, click ‘Code’ which will open a drop down menu.
+1. Click the HTTPs section (a red line should be displayed underneath).
+1. To clone the repository using HTTPS, under "Clone with HTTPS", click the clipboard icon.
+1. Open your IDE terminal
+1. Type ‘git clone’ and paste in the url you just copied - it should look like this `$ git clone https://github.com/scotty-james/the-dog-shop--MS4`
+1. Press enter which will then create your local clone.
+1. You must ensure that all project requirements are downloaded by running the following command `pip3 install -r requirements.txt`
+1. Create a new file called `env.py` and set the correct variables details in the Config Vars section above (these must match the variables set in Heroku). 
+1. Create a .gitignore file if not already created and ensure env.py to ensure the variable keys are not pushed into version control. 
+1. To open the application, run the following command in the terminal using the `python3 manage.py runserver` command. 
+1. To stop running the application at any time, type `CTRL+C` to quit. 
+
 
 
 
