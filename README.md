@@ -915,6 +915,16 @@ Updated the bag/includes/quantity_input_script.html file by changing the itemID 
 
 ![Duplicate Id Error Fix](static/images/readme_images/dup-id-image-fix.png)
 
+Additional Bugs fixed:
+
+| Bug | Fix  |
+| ---------- | ---- |
+| Search Bar returning 505 error page when used on Mobile | Running a search within the search bar on desktop returned the expected results, but when tested on Mobile, the customer 505 error page returned. The issue was related to the incorrect name attribute within the input code line `<input class="border border-black rounded-1" type="text" name="q" placeholder="Search">`, once fixed, the search behaved as expected.|
+| Password reset functionality returning 505 error page when email submitted. | Initially, I focused my time reviewing the Allauth templates to try and pin down the error. As all other emails were working, I had assumed it was code related. However, the problem originated from when I set up sending real e-mails from Django and was due to not updating my variables in the GitPod workspace. Once added, I retested and the functionality was fixed.  |
+| 505 error handling message when attempting to update user profile information in the Profile App. | This error was returning a 505 at the update information event. Having traced back to views.py, the error was in relation to indentation on the following code <br> `orders = profile.orders.all()` <br> `posts = Post.objects.filter(status=0).order_by('-created_on')`. Although this had not been picked up in the terminal when I was building the view, once I fixed it, the error was resolved.|
+| Delete Modal was not deleting the correct product, blogpost or comments. Instead, the Modal was deleted from the oldest item added to the site.| I understood what was happening here and that the Modal would be doing a loop and mostly related to the ID’s associated with it. I finally found some good examples of this error from previous students in the slack community which enabled me to pinpoint the issue. To fix this, I updated the Delete Comment Modal Trigger ID to `id="deleteComment_{{ comment.id }}` and matched that to the Main Modal Data Target Attribute. This then resolved the issue and the Modal began deleting the correct item. I applied this anywhere where there were multiple items on one page - Main Products Page, Blog Page and Comments Page. This was of course not required on the individual product page as there is no need to generate unique ID's. |
+|
+
 
 # <p align="center">Version Control Management
 
@@ -944,7 +954,7 @@ DATABASES = {
   'default': dj_database_url.parse('Postgres database URL')
 }
 ```
-- The reason for this is to pass the Database to Heroku.
+- The reason for this is to connnect the Database to Heroku.
 ```
 IMPORTANT: Adding the postgres database url is only to load the DB in Heroku, once finished, this should be removed to avoid unintentionally adding it into version control.
 ```
@@ -1016,7 +1026,6 @@ USE_AWS|True
 
 ## How To run this Project Locally
 
-
 Steps: 
 
 1. Click [here](https://github.com/scotty-james/the-dog-shop--MS4) to access the site's repository.
@@ -1031,6 +1040,43 @@ Steps:
 1. Create a .gitignore file if not already created and ensure env.py to ensure the variable keys are not pushed into version control. 
 1. To open the application, run the following command in the terminal using the `python3 manage.py runserver` command. 
 1. To stop running the application at any time, type `CTRL+C` to quit. 
+
+
+## Issues encountered with Deployment
+
+During deployment, I ran into some trouble when connecting my Postgres Database URL to Heroku from within my settings.py. To connect to postgres, I temporarily commented out the the sqlite database and added the following - where (Postgres database URL) is inputted, my real URL was inputted. 
+
+```
+DATABASES = {
+  'default': dj_database_url.parse('Postgres database URL')
+}
+```
+Once finished the deployment, it is important to remove this to ensure the Postgres URL doesn't end up in version control. 
+
+Unfortunately, I accidentally committed the changes I had made before removing the URL from settings.py. - sending my Postgres URL straight to GitHub. 
+
+I identified this issue and knew it had to be resolved. Steps taken below.
+
+### Destroyed the database:
+1. Opened Heroku and navigated to the Resource section where I initially created the Postgres Database URL.
+1. Clicked on the active Postgres URL which brought me to the datastores section. 
+3. Clicked on settings and then proceeded to destroy the database. 
+
+### Set Up a new database. 
+1. Returned back to the Resources tab and created a new Postgres URL. 
+1. Verified that the new URL had been updated in my Heroku config vars. 
+1. Updated settings.py with the new Postgres URL. 
+1. Proceeded with the remaining deployment steps and applied all migrations. 
+1. Ran python3 manage.py runserver loaddata categories.
+1. Ran python3 manage.py runserver loaddata products.
+1. Created a new superuser.
+1. Removed the new Postgres URL from settings.py when database set up was complete. 
+1. Updated variable in GitPod workspace.
+
+This was a very good learning opportunity for me in understanding the importance of keeping information safe when building web apps. Luckily, when creating the new database I didn't encounter any further issues and I was able to move forward quickly.
+
+--- 
+
 
 
 
