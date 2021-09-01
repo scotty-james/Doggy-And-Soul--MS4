@@ -4,7 +4,7 @@
 
 ### <p align="center">The image above is a visual of the site displayed on different devices using [I Am Responsive](http://ami.responsivedesign.is/#)
 
-### <p align="center">You can view the live site here: [www.the-dog-shop.com](https://the-dog-shop.herokuapp.com//)
+### <p align="center">You can view the live site here: [www.the-dog-shop.com](https://the-dog-shop.herokuapp.com/)
 
 --- 
 
@@ -730,7 +730,7 @@ Site Structure and Framework: Credit to be given to the Code Institute Mini Cour
 
 ### Comments Section: 
 
-[Django Central](https://djangocentral.com/creating-comments-system-with-django/): Used to help build out the comments section. 
+[Django Central: Comments](https://djangocentral.com/creating-comments-system-with-django/): Used to help build out the comments section. 
 
 [Codemy.com](https://www.youtube.com/watch?v=hZrlh4qU4eQ&t=558s) Django Series for buildings blog comments section. 
 
