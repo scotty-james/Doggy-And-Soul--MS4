@@ -155,17 +155,26 @@ The structure of the site will be a simplistic flow that navigates the user thro
 > - The main page of the site will visually demonstrate the site's purpose so that when a user lands on the home page, there is no confusion as to what the site is. 
 > - A link will be placed directly in the middle of the page with a clear call to action of ‘SHOP NOW’, allowing the customer to go straight to the products page. 
 
+![home-page](documents/images/readme_images/home_page.png)
+
 ### Search Bar
-> - Allows the user to search for products, enabling quicker identification of specific requirements. 
+> - Allows the user to search for products, enabling quicker identification of specific requirements.
+
+![searchbar](documents/images/readme_images/searchbar.png)
 
 ### My Account
 > - A drop down nav bar that allows the site user to register or sign into their account, access their personalised profile page or log out of their account. 
 > - When in a non-logged state, only a Register and Login link will display. 
-> - When logged in and authenticated, a ‘Profile and Logout link will display. 
+> - When logged in and authenticated, a ‘Profile' and 'Logout' link will display. 
 > - If the site user is a superuser or admin user, additional links will appear to that user group privileges which will be a Product Admin link and a Blog Admin Link.
+
+![myaccount](documents/images/readme_images/my-account-link.png)
 
 ### Shopping bag
 > - A shopping bag icon will be present in the navbar which will add up the value of any products added to the user's bag throughout their shopping journey. This allows the users to visually see the total spend as the shop.
+> - The total amount of products is also displayed, which increases/decreases as the bag is updated. 
+
+![shopping-bag](documents/images/readme_images/shopping-bag.png)
 
 ### Navigation links
 > - Several product specific navigational links will be displayed to allow the user to navigate quickly to specific product ranges. 
@@ -173,8 +182,12 @@ The structure of the site will be a simplistic flow that navigates the user thro
 ### Call to action banner
 > - Underneath the main navigation link, a call to action banner will be displayed to encourage the user to increase their spend, currently this will be free delivery, but in future could also be used for initiatives like discount codes or shipping information. 
 
+![navbar](documents/images/readme_images/nav-bar.png)
+
 ### Main Products page
 > - All products displayed on this page. Users will be able to sort by Price, Rating, Name or Category. 
+
+![main-products](documents/images/readme_images/main-products-page.png)
 
 ### Individual Products page
 > - Page specific to a product a user clicked on. This page will display the product details, including Price, Category and Rating. 
@@ -182,6 +195,8 @@ The structure of the site will be a simplistic flow that navigates the user thro
 > - If the product comes in a range of sizes, a size selector drop down will appear. 
 > - A Continue Shopping button will allow the user to return to the product page. 
 > - An Add to bag button will allow the user to add the product to their shopping bag. 
+
+![individual-products-page](documents/images/readme_images/individual-product-page.png)
 
 ### Shopping bag toast pop up:
 When an item is added to the Shopping Bag, a pop up appears to visually show the user their shopping bag details. This includes:
@@ -203,6 +218,8 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 > - A ‘Continue Shopping’ button to allow users to go back to the main products page. 
 > - A ‘Secure Checkout’ button which will take the user to the main Check Out Page. 
 
+![shopping-bag-delta](documents/images/readme_images/bag-delivery-delta.png)
+
 ### Check Out Page
 > - A simple checkout page where the user will see their order summary and a checkout form for entering their delivery details. 
 > - A call to action will be displayed to encourage the user to create and account or sign in to save their information. 
@@ -210,33 +227,52 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 > - A payment section, allowing the user to add their payment method.
 > - A message will appear to demonstrate once again how much the user will be charged.
 
+![checkout](documents/images/readme_images/checkout.png)
+![charge-amount](documents/images/readme_images/payment-charge.png)
+
 ### Checkout Success Page
 > - When payment is successful, a checkout success page will display, showing the user their order confirmation number, order summary and delivery information. 
 > - A link to allow the user to return to the main products page. 
-> - Upon successful completion of an order, the user will be sent a confirmation e-mail containing their order number and order details. 
+> - Upon successful completion of an order, the user will be sent a confirmation e-mail containing their order number and order details.
+
+![checkout-success](documents/images/readme_images/checkout-success.png)
 
 ### User Profile Page
 > - Personalised profile page where users can store their delivery information. 
 > - If a user is logged in when making a purchase, their order details will be stored and displayed in their profile page order history section - this contains order number and summary of items purchased. 
 > - If the user is a superuser or Admin (Site Owner), their profile page will also contain any unpublished blogs. These blogs can be edited and posted live on the site from within this page.
+
+![profile-page](documents/images/readme_images/profile-page.png)
+![admin-profile-page](documents/images/readme_images/admin-profile-page.png)
  
 ### Blog Management
 > - Allows Site Owners to create draft blog posts and either post directly onto the site or save for later. 
 > - Draft (unpublished) blog posts will be saved to the Site Owners profile page. 
 
+![blog-management](documents/images/readme_images/blog-management.png)
+
 ### Product Management
 > - Allows Site Owners to add products directly to the store. 
 > - Store owners will also be able to edit and delete products on the main products page and the individual product page. 
 
+![product-management](documents/images/readme_images/product-management.png)
+![edit-product](documents/images/readme_images/edit-product.png)
 
 ### Blog Page
 > - Dedicated blog page which will be used for presenting market specific content. 
 > - Users can access blogs and information on this page. 
 
+![blog-page](documents/images/readme_images/blog-page.png)
+![individual-blog](documents/images/readme_images/individual-blog.png)
+
 ### Comments Section 
 > - A comments section will be contained within individual blog post pages, allowing the user to add comments and opinions to posted blog posts. 
 > - Users will be able post and delete their own comments. 
 > - Superusers (Site Owners) will be able to delete all comments without restriction.
+
+![comments-section](documents/images/readme_images/comments-section.png)
+![comments-not-logged-in](documents/images/readme_images/comment-not-logged-in.png)
+![comments-form](documents/images/readme_images/comment-form.png)
 
 ### Footer 
 > - A simple fixed footer that contains links to the company social media accounts. The footer will only be present on larger screens and will not be visible on mobile devices to improve the mobile shopping experience.  
@@ -509,79 +545,6 @@ Order summary including product image displayed on checkout page.
 Please review the seperate testing document locating in [TESTING.md](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/TESTING.md)
 
 --- 
-
-## Fixed Bugs
- 
-### Blog and Product editing pages:
-- Edit-post.html
-- Edit_product.html
-
-Site validation on both these pages failed due to a Duplicate ID error:  
-
-![Duplicate ID Error](documents/images/readme_images/dup-id-image-error.png)
-
-I found this a fairly difficult error to trace back, but after a lot of searching and reading previous comments in the group slack channel, I noticed that the first error was attributed to the fact I had created 2 separate customer_clearable_file_input.html files - one each for the Blog and Product Apps. 
-
-![Duplicate ID Error](documents/images/readme_images/custom-file-error.png)
-
-Steps taken to fix:
-
-- Delete the customer widgets template from the blog app - including the customer_clearable_file_input.html file. 
-- Delete the widgets.py file from the blog app.
-- In the blog app forms.py, import CustomerClearableFileInput from product.widgets.
-- This continued to throw the same error. I then changed the file ID name to match the duplicate ID error I was getting to see if this would fix the issue - `new-image` to `id_image`. 
-- I changed this in the custom clearable file input file and also the associated JS code. 
-
-This seemed to fix the issue, but another issue was now present where the file input was now displayed as an Input field on the front end. 
-
-![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.png)
-
-![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.1.png)
-
-To resolve this, I changed the input type from `id_image` to `‘file’` in the customer clearable input file (`Select Image <input type="file"`) and retested. This then finally resolved the issue and all both edit product and edit post files passed through validation successfully.
-
-![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
-
-### Duplicate ID error on the Shopping Bag Page:
-
-- bag.html
-
-This was another error that really took a bit of time to investigate and understand. The error was coming from the quantity form increment/decrement functionality. The original code for this was taken from the course walk through project ‘Ado Boutique’. The code was originally used in the product details page and adapted for the shopping car to enhance the mobile experience. However, this resulted in the same ID’s being used for different functions. 
-
-Steps taken to fix:
-- Created a new include file within the Bag App called quantity_input_script.html 
-- Added the code from the same named file (quantity_input_script.html) in the Product App. 
-- Analysed the files associated with the script to obtain all ID’s causing the issue, in this case they were:
-  - `id="decrement-qty_{{ item.item_id }}`
-  - `id="increment-qty_{{ item.item_id }}`
-  - `id_qty_{{ item.item_id }}`
-  - `id="remove_{{ item.item_id }}`
-- Changed these ID’s to Classes and removed the ID attribute. 
-Updated the bag/includes/quantity_input_script.html file by changing the itemID attribute to ‘Class’. 
-- Changed name of includes directory file to point towards the the Bag App file, rather than the Products App file. 
-- This resolved the issu. Passing the page through site validation then returned a successful validation.
-
-![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
-
-Additional Bugs fixed:
-
-| Bug | Fix  |
-| ---------- | ---- |
-| Search Bar returning 505 error page when used on Mobile | Running a search within the search bar on desktop returned the expected results, but when tested on Mobile, the customer 505 error page returned. The issue was related to the incorrect name attribute within the input code line `<input class="border border-black rounded-1" type="text" name="q" placeholder="Search">`, once fixed, the search behaved as expected.|
-| Password reset functionality returning 505 error page when email submitted. | Initially, I focused my time reviewing the Allauth templates to try and pin down the error. As all other emails were working, I had assumed it was code related. However, the problem originated from when I set up sending real e-mails from Django and was due to not updating my variables in the GitPod workspace. Once added, I retested and the functionality was fixed.  |
-| 505 error handling message when attempting to update user profile information in the Profile App. | This error was returning a 505 at the update information event. Having traced back to views.py, the error was in relation to indentation on the following code <br> `orders = profile.orders.all()` <br> `posts = Post.objects.filter(status=0).order_by('-created_on')`. Although this had not been picked up in the terminal when I was building the view, once I fixed it, the error was resolved.|
-| Delete Modal was not deleting the correct product, blogpost or comments. Instead, the Modal was deleted from the oldest item added to the site.| I understood what was happening here and that the Modal would be doing a loop and mostly related to the ID’s associated with it. I finally found some good examples of this error from previous students in the slack community which enabled me to pinpoint the issue. To fix this, I updated the Delete Comment Modal Trigger ID to `id="deleteComment_{{ comment.id }}` and matched that to the Main Modal Data Target Attribute. This then resolved the issue and the Modal began deleting the correct item. I applied this anywhere where there were multiple items on one page - Main Products Page, Blog Page and Comments Page. This was of course not required on the individual product page as there is no need to generate unique ID's. |
-|
-
-### Remaining Bugs:
-
-> Allauth form navigation <br>
-When testing the Allauth pages, the form validation is working correctly and warning the user that they need to input data in the required fields. However, the validation is also powering up when the link to the home page is clicked. This is not correct behaviour as the home button should allow the user to be redirected to the home page without having to fill in any forms Due to time constraints, this bug will be fixed as part of a future release. Although not a great customer experience, the customer can navigate out using other methods, such as the home link in the navbar, logo link, and any other link in the nav. 
-
-> Toast Popup/Time Delay <br> 
-The toast feature is a nice addition to the site. However, there is no time delay and when the event is triggered, the pop up remains on screen until the user clicks on it to remove. This is a poor user experience, especially on mobile. I have decided to keep it as is for now as it is part of the project, however, this will be fixed as part of a future release. 
-
----
 
 # <p align="center">Version Control Management
 

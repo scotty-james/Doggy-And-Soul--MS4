@@ -364,3 +364,83 @@ SO THAT I CAN: Easily see all unpublished blog posts<br>
 SO THAT I CAN: Remove content from the site <br>
 
 ![User-story-4](documents/images/readme_images/user-story-20.png)
+
+## Fixed Bugs
+ 
+### Blog and Product editing pages:
+- Edit-post.html
+- Edit_product.html
+
+Site validation on both these pages failed due to a Duplicate ID error:  
+
+![Duplicate ID Error](documents/images/readme_images/dup-id-image-error.png)
+
+I found this a fairly difficult error to trace back, but after a lot of searching and reading previous comments in the group slack channel, I noticed that the first error was attributed to the fact I had created 2 separate customer_clearable_file_input.html files - one each for the Blog and Product Apps. 
+
+![Duplicate ID Error](documents/images/readme_images/custom-file-error.png)
+
+Steps taken to fix:
+
+- Delete the customer widgets template from the blog app - including the customer_clearable_file_input.html file. 
+- Delete the widgets.py file from the blog app.
+- In the blog app forms.py, import CustomerClearableFileInput from product.widgets.
+- This continued to throw the same error. I then changed the file ID name to match the duplicate ID error I was getting to see if this would fix the issue - `new-image` to `id_image`. 
+- I changed this in the custom clearable file input file and also the associated JS code. 
+
+This seemed to fix the issue, but another issue was now present where the file input was now displayed as an Input field on the front end. 
+
+![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.png)
+
+![Duplicate Id Error](documents/images/readme_images/dup-id-image-error-2.1.png)
+
+To resolve this, I changed the input type from `id_image` to `‘file’` in the customer clearable input file (`Select Image <input type="file"`) and retested. This then finally resolved the issue and all both edit product and edit post files passed through validation successfully.
+
+![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
+
+### Duplicate ID error on the Shopping Bag Page:
+
+- bag.html
+
+This was another error that really took a bit of time to investigate and understand. The error was coming from the quantity form increment/decrement functionality. The original code for this was taken from the course walk through project ‘Ado Boutique’. The code was originally used in the product details page and adapted for the shopping car to enhance the mobile experience. However, this resulted in the same ID’s being used for different functions. 
+
+Steps taken to fix:
+- Created a new include file within the Bag App called quantity_input_script.html 
+- Added the code from the same named file (quantity_input_script.html) in the Product App. 
+- Analysed the files associated with the script to obtain all ID’s causing the issue, in this case they were:
+  - `id="decrement-qty_{{ item.item_id }}`
+  - `id="increment-qty_{{ item.item_id }}`
+  - `id_qty_{{ item.item_id }}`
+  - `id="remove_{{ item.item_id }}`
+- Changed these ID’s to Classes and removed the ID attribute. 
+Updated the bag/includes/quantity_input_script.html file by changing the itemID attribute to ‘Class’. 
+- Changed name of includes directory file to point towards the the Bag App file, rather than the Products App file. 
+- This resolved the issu. Passing the page through site validation then returned a successful validation.
+
+![Duplicate Id Error Fix](documents/images/readme_images/dup-id-image-fix.png)
+
+Additional Bugs fixed:
+
+| Bug | Fix  |
+| ---------- | ---- |
+| Search Bar returning 505 error page when used on Mobile | Running a search within the search bar on desktop returned the expected results, but when tested on Mobile, the customer 505 error page returned. The issue was related to the incorrect name attribute within the input code line `<input class="border border-black rounded-1" type="text" name="q" placeholder="Search">`, once fixed, the search behaved as expected.|
+| Password reset functionality returning 505 error page when email submitted. | Initially, I focused my time reviewing the Allauth templates to try and pin down the error. As all other emails were working, I had assumed it was code related. However, the problem originated from when I set up sending real e-mails from Django and was due to not updating my variables in the GitPod workspace. Once added, I retested and the functionality was fixed.  |
+| 505 error handling message when attempting to update user profile information in the Profile App. | This error was returning a 505 at the update information event. Having traced back to views.py, the error was in relation to indentation on the following code <br> `orders = profile.orders.all()` <br> `posts = Post.objects.filter(status=0).order_by('-created_on')`. Although this had not been picked up in the terminal when I was building the view, once I fixed it, the error was resolved.|
+| Delete Modal was not deleting the correct product, blogpost or comments. Instead, the Modal was deleted from the oldest item added to the site.| I understood what was happening here and that the Modal would be doing a loop and mostly related to the ID’s associated with it. I finally found some good examples of this error from previous students in the slack community which enabled me to pinpoint the issue. To fix this, I updated the Delete Comment Modal Trigger ID to `id="deleteComment_{{ comment.id }}` and matched that to the Main Modal Data Target Attribute. This then resolved the issue and the Modal began deleting the correct item. I applied this anywhere where there were multiple items on one page - Main Products Page, Blog Page and Comments Page. This was of course not required on the individual product page as there is no need to generate unique ID's. |
+| HOME navigation links being blocked by form validation requirements on Allauth Forms.| I identified the issue to be related to the `<button>` tag I had added during development. To resolve the issue, I changed the tag back to `<a>` and added in the relevant classes to restyle. Rested and the links navigated as intended. |
+|
+
+### Remaining Bugs:
+
+> Allauth form navigation FIXED: 01/09/21 - DETAILS ADDED TO FIXED BUG SECTION<br>
+When testing the Allauth pages, the form validation is working correctly and warning the user that they need to input data in the required fields. However, the validation is also powering up when the link to the home page is clicked. This is not correct behaviour as the home button should allow the user to be redirected to the home page without having to fill in any forms Due to time constraints, this bug will be fixed as part of a future release. Although not a great customer experience, the customer can navigate out using other methods, such as the home link in the navbar, logo link, and any other link in the nav. 
+
+> Toast Popup/Time Delay <br> 
+The toast feature is a nice addition to the site. However, there is no time delay and when the event is triggered, the pop up remains on screen until the user clicks on it to remove. This is a poor user experience, especially on mobile. I have decided to keep it as is for now as it is part of the project, however, this will be fixed as part of a future release. 
+
+>Qty Input Selector on bag.html <br>
+The quantity input selector does not disable at the required parameters of 1-99. This works fine on the product details page, but the bug is present on the shopping bag page. 
+This issue is only present on desktop. When tested on Mobile, it works as intended. 
+I suspect this is due to adapting the quantity selector to fit better on Mobile devices. This requires further investigation and will be fixed as part of a future release. 
+
+
+---
