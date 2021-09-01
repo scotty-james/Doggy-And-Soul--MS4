@@ -135,6 +135,12 @@ p {
     background-color: #e9ecef00;
 }
 
+.btn-allauth {
+    color: white;
+    background-color: #0b2f47;
+    border-radius: .25rem;
+}
+
 /*-------------------------------------------Forms*/
 
 .form-control {
