@@ -18,23 +18,23 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 
 # Contents
 
-- [**User Experience (UX)**](#ux)
-  - [User Stories](#user-stories)
-  - [Strategy](#strategy)
-    - [_External user’s goal_](#external-user’s-goal)
-    - [_Site owner's goal_](#external-user’s-goal)
+- [**User Experience (UX)**](#UX)
+  - [_User Stories_](#user-stories)
+  - [_Strategy_](#strategy)
+    - [_Site user goals_](#site-user-goals)
+    - [_Site owner goals_](#Site-owner-goals)
   - [Scope](#scope)
     - [_Scope In_](#scope-in)
     - [_Scope Out_](#scope-out)
   - [Structure](#structure)
   - [Skeleton](#skeleton)
-    - [_Wireframes_](#mobile-wireframes)
+    - [_Wireframes_](#wireframes)
   - [Surface](#surface)
     - [_Design_](#design)
     - [_Colour_](#colour)
     - [_Typography_](#typography)
-- [**Data Set Up**](#data-set-up)
-    - [_Database Design_](#cdata-base-design)
+- [**Database Set Up**](#database-set-up)
+    - [_Models_](#models)
 - [**Features**](#features)
   - [_Existing Features_](#existing-features)
   - [_Features Left to Implement_](#features-left-to-implement)
@@ -55,7 +55,7 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 
 ---
 
-# <p align="center"> UX
+# UX
 
 ### User Stories
 
@@ -91,7 +91,7 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 
 ## Strategy
 
-### External user’s goal
+### Site user goals
 
 > - Easily navigate a consumer website to find the products that I’m interested in. 
 > - Creating an account should be seamless and not require too much personal information or questions. 
@@ -99,7 +99,7 @@ I built this e-commerce site for my 4th and final milestone project he Code Inst
 > - Adding comments and interacting with blog posts should be simple, and I should have control over my content by being able to delete posts whenever I decide to do so. 
 
 
-### Site owner's goal
+### Site owner goals
 
 > - Create a site that provides specific information to a targeted audience. 
 > - Create a site that allows site users to easily navigate products, having the ability to search and sort different product types and view individual product details - price, ratings etc. 
@@ -329,9 +329,11 @@ In line with the website's simple and clean design, Only one font has been used 
 
 --- 
 
-## Database Set Up / Models
+# Database Set Up
 
 For the development of the project, [SQLite3](https://www.sqlite.org/index.html) was used. [Heroku Postgres](https://www.heroku.com/postgres) was used for production. There are a total of 7 models built to support the project, each one detailed below. 
+
+## Models
 
 ## <p align="center">Blog App
 
@@ -443,7 +445,7 @@ For the development of the project, [SQLite3](https://www.sqlite.org/index.html)
 
 --- 
 
-# <p align="center"> Features
+# Features
 
 ## Existing Features
 
@@ -500,7 +502,7 @@ Order summary including product image displayed on checkout page.
 
 --- 
 
-# <p align="center"> Technologies Used
+# Technologies Used
 
 ## Languages
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -543,12 +545,12 @@ Order summary including product image displayed on checkout page.
  
 --- 
 
-# <p align="center">Testing
+# Testing
 Please review the seperate testing document locating in [TESTING.md](https://github.com/scotty-james/the-dog-shop--MS4/blob/main/TESTING.md)
 
 --- 
 
-# <p align="center">Version Control Management
+# Version Control Management
 
 For this project, I used Git for version control.
 
@@ -558,7 +560,7 @@ For this project, I used Git for version control.
 - I then pushed the local git to my GitHub repository using the `git push` command.
 - Throughout the development lifecycle of the site, I used commit messages that were in the imperative language.
 
-# <p align="center">Deployment
+# Deployment
 
 ### Deployment Steps
 
@@ -702,10 +704,41 @@ This was a very good learning opportunity for me in understanding the importance
 
 --- 
 
-## <p align="center">Credits
+## Credits
 
+### Content
 
-## <p align="center"> Acknowledgements
+- All product and product descriptions were taken from [amazon.com](www.amazon.co.uk). 
+- Various pieces of content throughout the site are also taken from the Code Institute Ado Boutique Django Mini Project.  
+
+## Media
+
+- All non product images used for the site were obtained from Canva.com.
+
+## Code
+
+### Ado Boutique
+```
+Site Structure and Framework: Credit to be given to the Code Institute Mini Course ‘Ado Boutique’. This module helped inspire this project and I used several elements from it to build this site. I found this extremely beneficial as it allowed me to really enhance my learning of Django. Having applied several of the concepts, I now feel much more confident in in my skill level. 
+```
+ 
+### Blog:
+
+[Django Central: Building a Blog](https://djangocentral.com/building-a-blog-application-with-django/) - used as additional guidance to build the Blog App.
+
+[Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M) Django Series for building a Django Blog. 
+
+### Comments Section: 
+
+[Django Central](https://djangocentral.com/creating-comments-system-with-django/): Used to help build out the comments section. 
+
+[Codemy.com](https://www.youtube.com/watch?v=hZrlh4qU4eQ&t=558s) Django Series for buildings blog comments section. 
+
+### Site Components:
+
+[Bootstrap](https://getbootstrap.com/docs/4.0/components/modal/) For building the Modals and Footer.
+
+## Acknowledgements
 
 - I would like to thank and acknowledge my mentor Spencer Barriball for his usual encouragement throughout the project and for the helpful tips and recommendations along the way, thank you for your guidance and support throughout the entire course - you have been great!
 
