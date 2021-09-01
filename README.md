@@ -261,6 +261,7 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 ### Blog Page
 > - Dedicated blog page which will be used for presenting market specific content. 
 > - Users can access blogs and information on this page. 
+> - Total number of blog posts displayed which adjusts as blogs are added/removed. 
 
 ![blog-page](documents/images/readme_images/blog-page.png)
 ![individual-blog](documents/images/readme_images/individual-blog.png)
@@ -268,6 +269,7 @@ When the ‘Secure Checkout’ button is clicked, the user will be navigated to 
 ### Comments Section 
 > - A comments section will be contained within individual blog post pages, allowing the user to add comments and opinions to posted blog posts. 
 > - Users will be able post and delete their own comments. 
+> - Total number of comments displayed which adjusts as comments are added/removed. 
 > - Superusers (Site Owners) will be able to delete all comments without restriction.
 
 ![comments-section](documents/images/readme_images/comments-section.png)

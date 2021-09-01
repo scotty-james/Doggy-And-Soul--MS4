@@ -265,6 +265,7 @@ SO THAT I CAN: Make a decision on where to share my personal details <br>
 SO THAT I CAN: Do not need to share my personal details <br>
 
 ![User-story-4](documents/images/readme_images/user-story-4.png)
+![comments-not-logged-in](documents/images/readme_images/comment-not-logged-in.png)
 
 > I WANT TO BE ABLE TO: Create an account <br>
 SO THAT I CAN: Save my personal information<br>
@@ -430,6 +431,9 @@ Additional Bugs fixed:
 |
 
 ### Remaining Bugs:
+```
+The following bugs will remain on the site at time of project submission. I had intended to fix these but due to time constraints I have highlighted them here to demonstrate awareness to the accessor. 
+```
 
 > Allauth form navigation FIXED: 01/09/21 - DETAILS ADDED TO FIXED BUG SECTION<br>
 When testing the Allauth pages, the form validation is working correctly and warning the user that they need to input data in the required fields. However, the validation is also powering up when the link to the home page is clicked. This is not correct behaviour as the home button should allow the user to be redirected to the home page without having to fill in any forms Due to time constraints, this bug will be fixed as part of a future release. Although not a great customer experience, the customer can navigate out using other methods, such as the home link in the navbar, logo link, and any other link in the nav. 
@@ -437,10 +441,30 @@ When testing the Allauth pages, the form validation is working correctly and war
 > Toast Popup/Time Delay <br> 
 The toast feature is a nice addition to the site. However, there is no time delay and when the event is triggered, the pop up remains on screen until the user clicks on it to remove. This is a poor user experience, especially on mobile. I have decided to keep it as is for now as it is part of the project, however, this will be fixed as part of a future release. 
 
->Qty Input Selector on bag.html <br>
+> Qty Input Selector on bag.html <br>
 The quantity input selector does not disable at the required parameters of 1-99. This works fine on the product details page, but the bug is present on the shopping bag page. 
 This issue is only present on desktop. When tested on Mobile, it works as intended. 
 I suspect this is due to adapting the quantity selector to fit better on Mobile devices. This requires further investigation and will be fixed as part of a future release. 
+
+> Shopping bag toast pop when adding / editing products or blog posts on the site <br>
+The shopping bag toast pop up displayed when adding or updating items within the store, this is not a good user experience and will be fixed in a future release. The fix will involve stopping the pop up when an action is not directly related to its intended purpose
+
+## Defensive Programming
+
+To ensure no malicious use of the site, defensive programming has been applied:
+
+> Superuser Privilege Only Functions.
+Add, Edit and Delete Blog Posts:
+
+![super-user-only-warning](documents/images/readme_images/blog-edit-user.png)
+
+> Deleting a product, blog post or comment accidentally:
+
+![product-delete-modal](documents/images/readme_images/product-delete-modal.png)
+
+![blog-delete-modal](documents/images/readme_images/blog-delete-modal.png)
+
+![comment-delete-modal](documents/images/readme_images/comment-delete-modal.png)
 
 
 ---
