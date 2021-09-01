@@ -1,29 +1,35 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-            <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
-                Home
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=luxury_dog_collars" id="prod-collar-link" aria-haspopup="true" aria-expanded="false">
-                Dog Collars
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=bed_blanket" id="prod-bed-link" aria-haspopup="true" aria-expanded="false">
-                Beds & Blankets
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=organic_dog_treats" id="prod-treat-link" aria-haspopup="true" aria-expanded="false">
-                Healthy Treats
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog_posts' %}" id="blog-link" aria-haspopup="true" aria-expanded="false">
-                Dog Blog
-            </a>
-        </li>
-    </ul>
+  <ul class="navbar-nav w-auto mx-auto">
+    <li class="nav-item d-block d-md-none">
+      <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="heading-font font-weight-bold nav-link text-black mr-5"
+        href="{% url 'products' %}?category=luxury_dog_collars" id="prod-collar-link" aria-haspopup="true"
+        aria-expanded="false">
+        Dog Collars
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=bed_blanket"
+        id="prod-bed-link" aria-haspopup="true" aria-expanded="false">
+        Beds & Blankets
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="heading-font font-weight-bold nav-link text-black mr-5"
+        href="{% url 'products' %}?category=organic_dog_treats" id="prod-treat-link" aria-haspopup="true"
+        aria-expanded="false">
+        Healthy Treats
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="heading-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog_posts' %}" id="blog-link"
+        aria-haspopup="true" aria-expanded="false">
+        Dog Blog
+      </a>
+    </li>
+  </ul>
 </div>

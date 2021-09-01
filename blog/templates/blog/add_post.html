@@ -2,18 +2,18 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<section class="container header-container">
     <div class="row">
         <div class="col">
-            
+
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
 
 {% block content %}
-<div class="bg-overlay"></div>
-<div class="container">
+<main class="container">
+    <div class="bg-overlay"></div>
     <div class="row">
         <div class="col-12">
             <h2 class="header-font mb-4 pt-4 text-center">Blog Management</h2>
@@ -38,13 +38,12 @@
                         site.</p>
                     <P>Draft posts will be saved in your<a class="text-info" href="{% url 'profile' %}"> Profile</a></P>
                     <button class="btn btn-sm btn-blue rounded-1 text-uppercase" type="submit">Add Post</button>
-                    <a class="btn btn-sm btn-blue rounded-1 text-uppercase"
-                        href="{% url 'blog_posts' %}">Cancel</a>
+                    <a class="btn btn-sm btn-blue rounded-1 text-uppercase" href="{% url 'blog_posts' %}">Cancel</a>
                 </div>
             </form>
         </div>
     </div>
-</div>
+</main>
 {% endblock %}
 
 {% block postloadjs %}

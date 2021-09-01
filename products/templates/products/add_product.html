@@ -2,18 +2,18 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<section class="container header-container">
     <div class="row">
         <div class="col">
-            
+
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
 
 {% block content %}
-<div class="bg-overlay"></div>
-<div class="container container-pd">
+<main class="container container-pd">
+    <div class="bg-overlay"></div>
     <div class="row">
         <div class="col-12">
             <h2 class="header-font mb-4 pt-2 text-center">Product Management</h2>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center">
+    <section class="row justify-content-center">
         <div class="col-sm-12 col-lg-8 pb-5">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -39,8 +39,8 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 {% endblock %}
 
 {% block postloadjs %}

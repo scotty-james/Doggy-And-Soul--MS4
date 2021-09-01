@@ -1,11 +1,10 @@
-[
-    {
+[{
         "pk": 1,
         "model": "products.category",
         "fields": {
             "name": "luxury_dog_collars",
             "friendly_name": "Luxury Dog Collars"
-      }
+        }
     },
     {
         "pk": 2,
@@ -13,7 +12,7 @@
         "fields": {
             "name": "organic_dog_treats",
             "friendly_name": "Organic Dog Treats"
-      }
+        }
     },
     {
         "pk": 3,
@@ -21,6 +20,6 @@
         "fields": {
             "name": "bed_blanket",
             "friendly_name": "Beds & Blankets"
-      }
+        }
     }
-    ]
+]
