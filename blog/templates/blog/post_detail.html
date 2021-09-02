@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block page_header %}
-<section class="container header-container">
+<div class="container header-container">
     <div class="row">
         <div class="col">
 
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -38,12 +38,12 @@
                     <p class="text-muted">Posted By: {{ post.user }} on the {{ post.created_on }}</p>
                     <p class="card-text">{{ post.blog_content }}</p>
                     {% if post.user == request.user or request.user.is_superuser %}
-                    <small class="text-uppercase text-blue">
-                        <a href="{% url 'edit_post' post.id %}">Edit |</a>
-                        <a role="button" class="text-danger text-uppercase" data-toggle="modal"
-                            data-target="#Blog-model">
-                            Delete</a>
+                    <small class="text-uppercase">
+                        <a class="btn-light text-blue" href="{% url 'edit_post' post.id %}" role="button">Edit |</a>
                     </small>
+                    <button type="button" class="btn-light text-danger text-uppercase small border-0" data-toggle="modal"
+                    data-target="#Blog-model">
+                    Delete</button>
                     <!-- Delete Button Modal -->
                     <div class="modal fade" id="Blog-model" tabindex="-1" role="dialog" aria-labelledby="Blog-model"
                         aria-hidden="true">
@@ -87,10 +87,10 @@
                     <p class="text-black mb-2 mt-3">{{ comment.comment_content }}</p>
                     {% if comment.user == request.user or request.user.is_superuser %}
                     <!-- Delete Button trigger modal -->
-                    <a role="button" class="text-danger text-uppercase small" data-toggle="modal"
+                    <button type="button" class="btn-light text-danger text-uppercase small border-0" data-toggle="modal"
                         data-target="#delete-comment{{ comment.id }}">
                         Delete Comment
-                    </a>
+                </button>
                     <!-- Delete Button Modal -->
                     <div class="modal fade" id="delete-comment{{ comment.id }}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">

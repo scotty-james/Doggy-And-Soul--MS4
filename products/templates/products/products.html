@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block page_header %}
-<section class="container header-container">
+<div class="container header-container">
     <div class="row">
         <div class="col">
 
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -100,12 +100,12 @@
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
                                     {% if request.user.is_superuser %}
-                                    <small class="ml-3 text-blue">
-                                        <a href="{% url 'edit_product' product.id %}">Edit |</a>
-                                        <a role="button" class="text-danger" data-toggle="modal"
-                                            data-target="#delete-product{{ product.id }}">
-                                            Delete</a>
+                                    <small class="mr-0">
+                                        <a class="btn-light text-blue" href="{% url 'edit_product' product.id %}" role="button">Edit |</a>
                                     </small>
+                                    <button type="button" class="btn-light text-danger small border-0 pl-0" data-toggle="modal"
+                                    data-target="#delete-product{{ product.id }}">
+                                    Delete</button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="delete-product{{ product.id }}" tabindex="-1"
                                         aria-hidden="true">
