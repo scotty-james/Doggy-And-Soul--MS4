@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<section class="container-fluid container-pd">
+<main class="container-fluid container-pd">
     <div class="overlay"></div>
     <div class="row">
         <div class="col text-center">
@@ -26,6 +26,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+      <!-- Sort Selector -->
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
@@ -64,6 +65,7 @@
                     </p>
                 </div>
             </div>
+              <!-- Product Detials -->
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -99,6 +101,7 @@
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
+                                      <!-- Edit or Delete Products -->
                                     {% if request.user.is_superuser %}
                                     <small class="mr-0">
                                         <a class="btn-light text-blue" href="{% url 'edit_product' product.id %}" role="button">Edit |</a>
@@ -106,7 +109,7 @@
                                     <button type="button" class="btn-light text-danger small border-0 pl-0" data-toggle="modal"
                                     data-target="#delete-product{{ product.id }}">
                                     Delete</button>
-                                    <!-- Modal -->
+                                    <!-- Delete Product Modal -->
                                     <div class="modal fade" id="delete-product{{ product.id }}" tabindex="-1"
                                         aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -160,7 +163,7 @@
             </div>
         </div>
     </div>
-</section>
+</main>
 <div class="btt-button shadow-sm 1 border border-black">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>

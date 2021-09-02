@@ -710,6 +710,7 @@ This was a very good learning opportunity for me in understanding the importance
 
 - All product and product descriptions were taken from [amazon.com](www.amazon.co.uk). 
 - Various pieces of content throughout the site are also taken from the Code Institute Ado Boutique Django Mini Project.  
+- Blog Content is just placeholder text for now for visual demonstration. The content was taken from [www.copyrightfreecontent.com](https://www.copyrightfreecontent.com/page/2/?s=dog)
 
 ## Media
 

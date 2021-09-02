@@ -21,8 +21,8 @@
             <hr>
         </div>
     </div>
-
-    <section class="row justify-content-center">
+     <!-- Add PRoduct Form -->
+    <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-8 pb-5">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -39,12 +39,13 @@
                 </div>
             </form>
         </div>
-    </section>
+    </div>
 </main>
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+ <!-- Product Image js -->
 <script>
     $('#id_image').change(function () {
         var file = $('#id_image')[0].files[0];

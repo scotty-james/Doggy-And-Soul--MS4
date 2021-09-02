@@ -25,7 +25,8 @@
             <hr>
         </div>
     </div>
-    <section class="row">
+    <!-- Personal Information -->
+    <div class="row">
         <div class="col-12 col-lg-6">
             <p class="text-muted">Default Delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
@@ -34,6 +35,7 @@
                 <button class="btn btn-blue rounded-1 text-uppercase float-right">Update Information</button>
             </form>
         </div>
+        <!-- Order History -->
         <div class="col-12 col-lg-6">
             <p class="text-muted">Order History</p>
             <div class="order-history table-responsive">
@@ -74,7 +76,7 @@
             </div>
         </div>
         <hr>
-    </section>
+    </div>
     <!-- Admin Unpublished Blog Posts -->
     {% if request.user.is_superuser %}
     <aside class="row">
@@ -88,7 +90,7 @@
             <hr>
         </div>
     </aside>
-    <section class="row mt-1 pb-5">
+    <div class="row mt-1 pb-5">
         {% for post in posts %}
         {% if post.user == request.user %}
         <div class="col-sm-12 col-md-6">
@@ -108,7 +110,7 @@
         {% endif %}
         {% endfor %}
         {% endif %}
-    </section>
+    </div>
 </main>
 
 

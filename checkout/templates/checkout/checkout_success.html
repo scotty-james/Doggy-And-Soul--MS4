@@ -21,13 +21,14 @@
     <div class="row">
         <div class="col">
             <br>
+             <!-- Order Confirmation Display -->
             <h2 class="header-font mb-4 pt-2">Thank You!</h2>
             <p class="text-black">We've received your order for {{ order.dog_name }}.</p>
             <p>A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
-
-    <section class="row">
+     <!-- Order Confirmation Details -->
+    <div class="row">
         <div class="col-12 col-lg-7">
             <div class="order-confirmation-wrapper p-2 border">
                 <div class="row">
@@ -192,15 +193,16 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="row">
+    </div>
+    <div class="row">
         <div class="col-12 col-lg-7 text-right">
             {% if from_profile %}
             <a href="{% url 'profile' %}" class="btn btn-blue rounded-1 my-2">
                 <span class="icon mr-2">
                     <i class="fas fa-angle-left"></i>
                 </span>
-                <span class="text-uppercase">Back to Profile</span>
+                 <!-- Nvigation back to site -->
+                <span class="text-uppercase">Go To Profile</span>
             </a>
             {% else %}
             <a href="{% url 'products' %}" class="btn btn-blue rounded-1 my-2">
@@ -211,5 +213,7 @@
             </a>
             {% endif %}
         </div>
-    </section>
-</main {% endblock %}
+    </div>
+</main> 
+
+{% endblock %}
