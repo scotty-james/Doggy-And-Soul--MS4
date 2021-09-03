@@ -335,6 +335,10 @@ For the development of the project, [SQLite3](https://www.sqlite.org/index.html)
 
 ## Models
 
+I used [DB Diagram](https://dbdiagram.io/home) to visually demonstrate the relationships between models.
+
+![Google Fonts](documents/images/readme_images/model_diagram.png)
+
 ## <p align="center">Blog App
 
 ###  Post Model
